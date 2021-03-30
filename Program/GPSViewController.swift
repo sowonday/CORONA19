@@ -35,6 +35,38 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
     }
     
+    func goLocation(latitudeValue: CLLocationDegrees, longitudeValue: CLLocationDegrees, delta span: Double) // 입력파라미터: 위도 값, 경도 값, 범위
+    {
+        let pLocation = CLLocationCoordinate2DMake(latitudeValue, longitudeValue) // 위경도를 매개변수로 하여 2DMake 함수를 호출하고, 리턴 값을 pLocation으로 받는다
+        let spanValue = MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span) //범위 값을 매개변수로 하여 spanValue로 받는다
+        let pRegion = MKCoordinateRegion(center: pLocation, span: spanValue) //Plocation과 spanvalue를 매개변수로 하여 리턴 값을 pRegion으로 받는다.
+        MyMap.setRegion(pRegion, animated: true) //pRegion 값을 매개변수로 하여 mymap.setregion 함수를 호출
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let pLocation = locations.last // 위치가 업데이트되면 먼저 마지막 위치 값을 찾아냅니다.
+        goLocation(latitudeValue: (pLocation?.coordinate.latitude)!, longitudeValue: (pLocation?.coordinate.longitude)!, delta: 0.01) //마지막 위치의 위도 경도 값을 가지고 앞에서 만든 golpcation 함수를 호출, 이때 delta 값은 지도의 크기를 정함. 1의 값보다 지도를 100배 확대해서 보여줌.
+        CLGeocoder().reverseGeocodeLocation(pLocation!, completionHandler: { //위도 경도를 가지고 역으로 주소 찾기
+            (placemarks, error)-> Void in
+            let pm = placemarks!.first // 첫 부분만 pm상수 대입
+            let country = pm!.country // 나라 값을 대입
+            var address:String = country! // address에 country 값 대입
+            if pm!.locality != nil{ //pm상수에 지엽 존재시, address문자열에 추가
+                address += ""
+                address += pm!.thoroughfare!
+                
+            }
+            if pm!.thoroughfare  != nil{
+                address += ""
+                address += pm!.thoroughfare! // pm상수에 도로값이 존재하면 address문자열에 추가
+            }
+            self.LocationInfo1.text = "현재위치" //레이블에 현재위치 텍스트 표시
+            self.LocationInfo2.text = address // address 문자열의 값 표시
+            
+        })
+        locationManager.startUpdatingLocation() // 위치가 업데이트 되는 것을 멈춤
+    }
+    
 
     /*
     // MARK: - Navigation
