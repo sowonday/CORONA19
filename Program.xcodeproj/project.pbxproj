@@ -14,6 +14,7 @@
 		154EFEA32604A10D00C05F41 /* Program.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 154EFEA12604A10D00C05F41 /* Program.xcdatamodeld */; };
 		154EFEA52604A10E00C05F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEA42604A10E00C05F41 /* Assets.xcassets */; };
 		154EFEA82604A10E00C05F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEA62604A10E00C05F41 /* LaunchScreen.storyboard */; };
+		1556264D26130453009458A1 /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556264C26130453009458A1 /* GPSViewController.swift */; };
 		C13AE79DE484ECDE1DFBF2BA /* Pods_Program.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70C9010A1D6467E9EF76FC3 /* Pods_Program.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		154EFEA42604A10E00C05F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		154EFEA72604A10E00C05F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		154EFEA92604A10E00C05F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1556264C26130453009458A1 /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
 		9F07B7D2EB642BDBA6851DC0 /* Pods-Program.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Program.debug.xcconfig"; path = "Target Support Files/Pods-Program/Pods-Program.debug.xcconfig"; sourceTree = "<group>"; };
 		C70C9010A1D6467E9EF76FC3 /* Pods_Program.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Program.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA641706AF6D67F512692569 /* Pods-Program.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Program.release.xcconfig"; path = "Target Support Files/Pods-Program/Pods-Program.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				154EFEA92604A10E00C05F41 /* Info.plist */,
 				154EFEA12604A10D00C05F41 /* Program.xcdatamodeld */,
 				153AA212260CDC1800691311 /* APIViewController.swift */,
+				1556264C26130453009458A1 /* GPSViewController.swift */,
 			);
 			path = Program;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				154EFEA32604A10D00C05F41 /* Program.xcdatamodeld in Sources */,
+				1556264D26130453009458A1 /* GPSViewController.swift in Sources */,
 				154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */,
 				154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */,
 				153AA213260CDC1800691311 /* APIViewController.swift in Sources */,
