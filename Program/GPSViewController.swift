@@ -85,8 +85,8 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
                         var num1Text: String = ""
                         var num2Text: String = ""
             
-                        num1Text = "위도: \(locations.coordinate.latitude)" //변환
-                        num2Text = "경도: \(locations.coordinate.longitude)"
+                        num1Text = "위도:\(locations.coordinate.latitude)" //변환
+                        num2Text = "경도:\(locations.coordinate.longitude)"
                         
                         self.Locationla.text = num1Text
                         self.Locationlo.text = num2Text
