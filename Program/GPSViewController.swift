@@ -13,18 +13,17 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
     
     @IBOutlet weak var MyMap: MKMapView! //지도
     
-    @IBOutlet weak var LocationInfo1: UILabel!//label1
+    @IBOutlet weak var LocationInfo1: UILabel!//위치정보
     
-    @IBOutlet weak var LocationInfo2: UILabel!//label2
+    @IBOutlet weak var LocationInfo2: UITextView!//위치
     
-    @IBOutlet weak var Locationla: UILabel! //위도
     
-    @IBOutlet weak var Locationlo: UILabel! //경도
+    @IBOutlet weak var Locationla: UITextView!//위도
+    
+    @IBOutlet weak var Locationlo: UITextView!//경도
+
     
     let locationManager = CLLocationManager()
- 
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,10 +98,16 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
                                 }
             
             
+            if pm!.administrativeArea != nil{ //pm상수에 지역 존재시, address문자열에 추가
+                address += ""
+                address += pm!.administrativeArea!
+            }
+                
             if pm!.locality != nil{ //pm상수에 지엽 존재시, address문자열에 추가
                 address += ""
-                address += pm!.thoroughfare!
-                
+                address += pm!.locality!
+            
+            
             }
             if pm!.thoroughfare  != nil{
                 address += ""

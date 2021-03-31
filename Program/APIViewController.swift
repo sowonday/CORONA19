@@ -11,6 +11,9 @@ import SwiftyJSON
 
 class APIViewController: UIViewController {
     
+    
+    @IBOutlet weak var coronaInfo: UITextView!
+    
     func getData() {
 
             AF.request("https://api.corona-19.kr/korea/country/new/?serviceKey=ohqQryHa9IUxPKRGTglfeVN1imsjZb6Fn", method: .get, parameters: [:], encoding: URLEncoding.default, headers:  ["Content-Type":"application/json;charset=utf-8"])
@@ -27,6 +30,8 @@ class APIViewController: UIViewController {
                         
                     let country = resultjson["seoul"]
                         print(country)
+                        
+                        
                        
                 
                     case .failure(let e):
@@ -34,6 +39,7 @@ class APIViewController: UIViewController {
                         
                         
                     }
+               
                    
                     
                    }
@@ -44,7 +50,10 @@ class APIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getData()
+        
+
         // Do any additional setup after loading the view.
     }
     
