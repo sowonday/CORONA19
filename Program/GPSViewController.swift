@@ -16,12 +16,14 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
     @IBOutlet weak var LocationInfo1: UILabel!//위치정보
     
     @IBOutlet weak var LocationInfo2: UITextView!//위치
-    
+    @IBOutlet weak var LocationInfo3: UITextView!//상세 위치
     
     @IBOutlet weak var Locationla: UITextView!//위도
     
-    @IBOutlet weak var Locationlo: UITextView!//경도
-
+//    @IBOutlet weak var Locationlo: UITextView!//경도
+    
+    @IBOutlet weak var newCase: UITextView! //코로나 신규확진자
+    
     
     let locationManager = CLLocationManager()
     
@@ -81,19 +83,9 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
             
                     if let locations = locations.first{
             
-                        var num1Text: String = ""
-                        var num2Text: String = ""
-            
-                        num1Text = "위도:\(locations.coordinate.latitude)" //변환
-                        num2Text = "경도:\(locations.coordinate.longitude)"
-                        
-                        self.Locationla.text = num1Text
-                        self.Locationlo.text = num2Text
-                        
-            
-            
-            //            print("위도: \(locations.coordinate.latitude)")
-            //            print("경도: \(locations.coordinate.longitude)")
+                        var num1Text: String = "" //위도 경도 값 넣을 변수 추가
+                         num1Text = "위도:\(locations.coordinate.latitude)\n경도:\(locations.coordinate.longitude)" //값 넣기
+                        self.Locationla.text = num1Text //text에 출력
             
                                 }
             
@@ -101,22 +93,27 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
             if pm!.administrativeArea != nil{ //pm상수에 지역 존재시, address문자열에 추가
                 address += ""
                 address += pm!.administrativeArea!
-            }
+                let endldx:String.Index = address.index(address.startIndex,offsetBy:4) //address 맨 앞 대한민국 자름(string 자르기 사용) //https://urbangy.tistory.com/6 (출처 사이트)
+                var change_address = String(address[endldx...]) // 자른 것을 저장
                 
+                self.LocationInfo1.text = "<현재위치>" //레이블에 현재위치 텍스트 표시
+                self.LocationInfo2.text = "지역:\t\(change_address)"  // address 문자열의 값 표시
+                
+            }
+
             if pm!.locality != nil{ //pm상수에 지엽 존재시, address문자열에 추가
                 address += ""
                 address += pm!.locality!
-            
             
             }
             if pm!.thoroughfare  != nil{
                 address += ""
                 address += pm!.thoroughfare! // pm상수에 도로값이 존재하면 address문자열에 추가
             }
+            self.LocationInfo3.text = ("상세주소:\t\(address)")
             
             
-            self.LocationInfo1.text = "현재위치" //레이블에 현재위치 텍스트 표시
-            self.LocationInfo2.text = address // address 문자열의 값 표시
+            
           
             
         })
@@ -134,9 +131,13 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
     }
     */
     
-    
-    @IBAction func ChangeLocation(_ sender: UISegmentedControl) {
-    }
-    
 
 }
+extension APIViewController{
+    if change_address == "굉주광역시"
+    print("")
+    
+    }
+
+
+
