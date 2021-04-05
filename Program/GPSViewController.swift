@@ -8,9 +8,10 @@
 import UIKit
 import MapKit
 import CoreLocation
+import SwiftyJSON
 
 class GPSViewController: UIViewController,CLLocationManagerDelegate {
-    
+   
     @IBOutlet weak var MyMap: MKMapView! //지도
     
     @IBOutlet weak var LocationInfo1: UILabel!//위치정보
@@ -29,6 +30,7 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         LocationInfo1.text = ""
         LocationInfo2.text = ""
@@ -99,6 +101,14 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
                 self.LocationInfo1.text = "<현재위치>" //레이블에 현재위치 텍스트 표시
                 self.LocationInfo2.text = "지역:\t\(change_address)"  // address 문자열의 값 표시
                 
+                var some = APIViewController()
+                
+                let what = People.Data.init("seoul")
+                print(what)
+                if change_address == "광주광역시" {
+                    self.newCase.text = "지역\t\(what)"
+                }
+                
             }
 
             if pm!.locality != nil{ //pm상수에 지엽 존재시, address문자열에 추가
@@ -133,11 +143,11 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
     
 
 }
+
+
 extension APIViewController{
-    if change_address == "굉주광역시"
-    print("")
     
-    }
+}
 
 
 

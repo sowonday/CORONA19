@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151F23CB261AF56200FBEDB9 /* Country_People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F23CA261AF56200FBEDB9 /* Country_People.swift */; };
 		153AA213260CDC1800691311 /* APIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AA212260CDC1800691311 /* APIViewController.swift */; };
 		154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE982604A10D00C05F41 /* AppDelegate.swift */; };
 		154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		151F23CA261AF56200FBEDB9 /* Country_People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country_People.swift; sourceTree = "<group>"; };
 		153AA212260CDC1800691311 /* APIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewController.swift; sourceTree = "<group>"; };
 		154EFE952604A10D00C05F41 /* Program.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Program.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		154EFE982604A10D00C05F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				154EFEA12604A10D00C05F41 /* Program.xcdatamodeld */,
 				153AA212260CDC1800691311 /* APIViewController.swift */,
 				1556264C26130453009458A1 /* GPSViewController.swift */,
+				151F23CA261AF56200FBEDB9 /* Country_People.swift */,
 			);
 			path = Program;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				154EFEA32604A10D00C05F41 /* Program.xcdatamodeld in Sources */,
+				151F23CB261AF56200FBEDB9 /* Country_People.swift in Sources */,
 				1556264D26130453009458A1 /* GPSViewController.swift in Sources */,
 				154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */,
 				154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */,

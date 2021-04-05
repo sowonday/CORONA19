@@ -11,7 +11,16 @@ import SwiftyJSON
 
 class APIViewController: UIViewController {
     
-    
+    struct Data {
+        var countryName : String
+        var newCase : Int
+        
+        init(_ json: JSON) {
+            countryName = json["countryName"].stringValue
+            newCase = json["newCase"].intValue
+        }
+
+    }
 
     @IBOutlet weak var coronaInfo: UITextView!
     @IBOutlet weak var coronaAll: UITextView!
@@ -29,27 +38,41 @@ class APIViewController: UIViewController {
                         
                         resultjson = JSON(value)// api추출 값 json으로 변경
                         
+                    
+                        
+                        let data = Data(resultjson[""])
+                        print(data)
+                        
                         var AllInfo : String = ""
                         AllInfo = "\(resultjson)"
-                        self.coronaAll.text = AllInfo // 전체 코로나 정보를 띄움
+//                        self.coronaAll.text = AllInfo // 전체 코로나 정보를 띄움
                         
-                        let chungnam = resultjson["chungnam","newCase"] //충남
-                        let chungbuk = resultjson["chungbuk","newCase"] //충북
-                        let daejeon = resultjson["daejeon","newCase"]//대전
-                        let gyeongbuk = resultjson["gyeongbuk","newCase"] //경북
-                        let incheon = resultjson["incheon","newCase"] //인천
-                        let busan = resultjson["busan","newCase"]//부산
-                        let ulsan = resultjson["ulsan","newCase"]//울산
-                        let gwangju = resultjson["gwangju","newCase"]//광주
-                        let sejong = resultjson["sejong","newCase"]//세종
-                        let daegu = resultjson["daegu","newCase"]//대구
-                        let seoul = resultjson["seoul","newCase"] //서울
-                        let gangwon = resultjson["gangwon","newCase"]//강원
-                        let gyeonggi = resultjson["gyeonggi","newCase"]//경기
-                        let jeonbuk = resultjson["jeonbuk","newCase"]//전북
-                        let jeju = resultjson["jeju","newCase"]//제주
-                        let gyeongnam = resultjson["gyeongnam","newCase"]//경남
-                        let jeonnam = resultjson["jeonnam","newCase"]//전남 -> 지역별로 코로나 추출
+//
+//                        let chungnam = resultjson["chungnam","newCase"] //충남
+//                        let chungbuk = resultjson["chungbuk","newCase"] //충북
+//                        let daejeon = resultjson["daejeon","newCase"]//대전
+//                        let gyeongbuk = resultjson["gyeongbuk","newCase"] //경북
+//                        let incheon = resultjson["incheon","newCase"] //인천
+//                        let busan = resultjson["busan","newCase"]//부산
+//                        let ulsan = resultjson["ulsan","newCase"]//울산
+//                        let gwangju = resultjson["gwangju","newCase"]//광주
+//                        let sejong = resultjson["sejong","newCase"]//세종
+//                        let daegu = resultjson["daegu","newCase"]//대구
+//                        let seoul = resultjson["seoul","newCase"] //서울
+//                        let gangwon = resultjson["gangwon","newCase"]//강원
+//                        let gyeonggi = resultjson["gyeonggi","newCase"]//경기
+//                        let jeonbuk = resultjson["jeonbuk","newCase"]//전북
+//                        let jeju = resultjson["jeju","newCase"]//제주
+//                        let gyeongnam = resultjson["gyeongnam","newCase"]//경남
+//                        let jeonnam = resultjson["jeonnam","newCase"]//전남 -> 지역별로 코로나 추출
+                    
+//                        let area : Data = Data(JSON(busan))
+//
+//                        print(area)
+//
+                       
+                        
+                        
     
 //
 //                        var countryInfo : String = ""
@@ -74,7 +97,6 @@ class APIViewController: UIViewController {
         super.viewDidLoad()
         
         getData()
-        
 
         // Do any additional setup after loading the view.
     }
