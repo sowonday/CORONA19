@@ -1,16 +1,33 @@
 PODS:
   - Alamofire (5.4.1)
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
+  - ChartsRealm (3.4.0):
+    - Charts (~> 3.4.0)
+    - RealmSwift (~> 3.18.0)
+  - Realm (3.18.0):
+    - Realm/Headers (= 3.18.0)
+  - Realm/Headers (3.18.0)
+  - RealmSwift (3.18.0):
+    - Realm (= 3.18.0)
   - SwiftyJSON (4.3.0)
   - SwiftyXMLParser (5.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - Charts
+  - ChartsRealm
   - SwiftyJSON (~> 4.0)
   - SwiftyXMLParser (from `https://github.com/yahoojapan/SwiftyXMLParser.git`)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Charts
+    - ChartsRealm
+    - Realm
+    - RealmSwift
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -24,9 +41,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
+  ChartsRealm: 2ae8bf478211a94b3b6dd20738db0b9b132eb66b
+  Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
+  RealmSwift: c817b5f374668cf08f649afb05f55d92a787649c
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   SwiftyXMLParser: 23b5a9321a8adf72aae29046ea58c3d097b4ac17
 
-PODFILE CHECKSUM: 27961b0c03a1e4b1ce9b20615dbfb4e745f5c3ab
+PODFILE CHECKSUM: 625d602b6151ef0c6ce5d212252e02f98313646a
 
 COCOAPODS: 1.10.1

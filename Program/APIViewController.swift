@@ -11,69 +11,42 @@ import SwiftyJSON
 
 class APIViewController: UIViewController {
     
-    struct Data {
-        var countryName : String
-        var newCase : Int
-        
-        init(_ json: JSON) {
-            countryName = json["countryName"].stringValue
-            newCase = json["newCase"].intValue
-        }
-
-    }
+    
+//    var datas = [Data]()
+    var Manager = APIManager()
+    var Manager_ALL = APIManager_ALL()
+    
+    
 
     @IBOutlet weak var coronaInfo: UITextView!
     @IBOutlet weak var coronaAll: UITextView!
     
-    func getData() {
-
-            AF.request("https://api.corona-19.kr/korea/country/new/?serviceKey=ohqQryHa9IUxPKRGTglfeVN1imsjZb6Fn", method: .get, parameters: [:], encoding: URLEncoding.default, headers:  ["Content-Type":"application/json;charset=utf-8"])
-                        .validate()
-                .responseJSON{ response in
-                    
-                    var resultjson: JSON
-                    
-                    switch response.result{
-                    case .success(let value):
-                        
-                        resultjson = JSON(value)// api추출 값 json으로 변경
-                        
-                    
-                        
-                        let data = Data(resultjson[""])
-                        print(data)
-                        
-                        var AllInfo : String = ""
-                        AllInfo = "\(resultjson)"
-//                        self.coronaAll.text = AllInfo // 전체 코로나 정보를 띄움
-                        
-//
-//                        let chungnam = resultjson["chungnam","newCase"] //충남
-//                        let chungbuk = resultjson["chungbuk","newCase"] //충북
-//                        let daejeon = resultjson["daejeon","newCase"]//대전
-//                        let gyeongbuk = resultjson["gyeongbuk","newCase"] //경북
-//                        let incheon = resultjson["incheon","newCase"] //인천
-//                        let busan = resultjson["busan","newCase"]//부산
-//                        let ulsan = resultjson["ulsan","newCase"]//울산
-//                        let gwangju = resultjson["gwangju","newCase"]//광주
-//                        let sejong = resultjson["sejong","newCase"]//세종
-//                        let daegu = resultjson["daegu","newCase"]//대구
-//                        let seoul = resultjson["seoul","newCase"] //서울
-//                        let gangwon = resultjson["gangwon","newCase"]//강원
-//                        let gyeonggi = resultjson["gyeonggi","newCase"]//경기
-//                        let jeonbuk = resultjson["jeonbuk","newCase"]//전북
-//                        let jeju = resultjson["jeju","newCase"]//제주
-//                        let gyeongnam = resultjson["gyeongnam","newCase"]//경남
-//                        let jeonnam = resultjson["jeonnam","newCase"]//전남 -> 지역별로 코로나 추출
-                    
-//                        let area : Data = Data(JSON(busan))
-//
-//                        print(area)
-//
-                       
-                        
-                        
+   
     
+//    func getData() {
+//
+//            AF.request("https://api.corona-19.kr/korea/country/new/?serviceKey=ohqQryHa9IUxPKRGTglfeVN1imsjZb6Fn", method: .get, parameters: [:], encoding: URLEncoding.default, headers:  ["Content-Type":"application/json;charset=utf-8"])
+//                        .validate()
+//                .responseJSON{ response in
+//
+//                    var resultjson: JSON
+//
+//                    switch response.result{
+//                    case .success(let value):
+//
+//                        resultjson = JSON(value)// api추출 값 json으로 변경
+//                        print(resultjson)
+//
+//
+//
+//                        let data = Data(resultjson["seoul"])
+//                        print(data)
+//
+//                        var AllInfo : String = ""
+//                        AllInfo = "\(resultjson)"
+//                      self.coronaAll.text = AllInfo // 전체 코로나 정보를 띄움
+                        
+
 //
 //                        var countryInfo : String = ""
 //                        countryInfo = "\(test)"
@@ -81,22 +54,33 @@ class APIViewController: UIViewController {
                     
     //                        print(country)
                 
-                    case .failure(let e): //실패 시
-                        print(e.localizedDescription)
-                        
-                        
-                    }
-                    
-                   }
-            
-                }
+//                    case .failure(let e): //실패 시
+//                        print(e.localizedDescription)
+//
+//
+//                    }
+//
+//                   }
+//
+//                }
+    
+    func ALL_GPS() {
+        let AllData: () = Manager_ALL.getData()
+        self.coronaAll.text = "\(AllData)"
         
-
+    }
+    
+    func Area_GPS() {
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Manager.getData(area:"seoul")
         
-        getData()
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -113,3 +97,9 @@ class APIViewController: UIViewController {
     */
 
 }
+
+//extension APIViewController:DataProtocol{
+//    func reData(data:[Data]) {
+////        self.datas = datas
+//    }
+//}

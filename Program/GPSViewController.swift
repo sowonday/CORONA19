@@ -28,6 +28,9 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
+    var Manager = APIManager() // getData(지역)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,28 +43,6 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()//위치 업데이트 시작
         MyMap.showsUserLocation = true // 위치 값 보기를 true로 설정
         
-        
-//        //locationManager 인스턴스 생성 및 델리게이트 생성
-//        locationManager.delegate = self
-//
-//        //포그라운드 상태에서 위치 추적 권한 요청
-//        locationManager.requestWhenInUseAuthorization()
-//
-//        //배터리에 맞게 권장되는 최적의 정확도
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//
-//        //위치업데이트
-//        locationManager.startUpdatingLocation()
-//
-//        //위도 경도 가져오기
-//        let coor = locationManager.location?.coordinate
-//        latitude = coor?.latitude
-//        longitude = coor?.longitude
-////        self.Locationlo.text = latitude
-////        self.Locationla.text =
-//
-
-        // Do any additional setup after loading the view.
     }
     
     func goLocation(latitudeValue: CLLocationDegrees, longitudeValue: CLLocationDegrees, delta span: Double) // 입력파라미터: 위도 값, 경도 값, 범위
@@ -101,12 +82,12 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
                 self.LocationInfo1.text = "<현재위치>" //레이블에 현재위치 텍스트 표시
                 self.LocationInfo2.text = "지역:\t\(change_address)"  // address 문자열의 값 표시
                 
-                var some = APIViewController()
+
+                let get: () = self.Manager.getData(area: "gwangju")
+                print(get)
                 
-                let what = People.Data.init("seoul")
-                print(what)
                 if change_address == "광주광역시" {
-                    self.newCase.text = "지역\t\(what)"
+                    self.newCase.text = "내 지역의 확진자:\(get)"
                 }
                 
             }
@@ -121,10 +102,6 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
                 address += pm!.thoroughfare! // pm상수에 도로값이 존재하면 address문자열에 추가
             }
             self.LocationInfo3.text = ("상세주소:\t\(address)")
-            
-            
-            
-          
             
         })
         locationManager.startUpdatingLocation() // 위치가 업데이트 되는 것을 멈춤
@@ -144,10 +121,6 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
 
 }
 
-
-extension APIViewController{
-    
-}
 
 
 

@@ -10,6 +10,7 @@ import Foundation
 extension GPSViewController{
 
 class People: APIViewController {
+    
     override func getData() {
         
     }

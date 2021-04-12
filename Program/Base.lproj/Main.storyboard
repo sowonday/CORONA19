@@ -62,6 +62,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="CORONA_19" id="LlE-km-WGO">
+                        <barButtonItem key="leftBarButtonItem" image="chart.bar.fill" catalog="system" style="plain" id="GPB-mx-gk1">
+                            <connections>
+                                <segue destination="GNl-h1-a47" kind="show" id="H1Z-W5-t8Q"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aKk-Cw-LoR">
                             <connections>
                                 <segue destination="Nr5-ge-Wg0" kind="show" id="G1f-o3-UQp"/>
@@ -76,6 +81,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75K-vU-nGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="513.04347826086962" y="66.964285714285708"/>
+        </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="HEP-iU-Amd">
+            <objects>
+                <viewController id="GNl-h1-a47" customClass="ChartViewController" customModule="Program" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="toX-WQ-fqm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-mR-cQu" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="165" width="414" height="567"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4yB-cx-U3a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hqc-xR-m8C"/>
+                    <connections>
+                        <outlet property="LineChart" destination="qe0-mR-cQu" id="Jt0-eQ-baQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fge-8F-vfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5652173913045" y="-644.19642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gJ9-Sg-L4O">
@@ -179,8 +210,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

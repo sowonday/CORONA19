@@ -7,6 +7,8 @@ target 'Program' do
 	pod 'SwiftyJSON', '~> 4.0'
 	pod 'Alamofire', '~> 5.2'
 	pod "SwiftyXMLParser", :git => 'https://github.com/yahoojapan/SwiftyXMLParser.git'
+	pod 'Charts'
+	pod 'ChartsRealm'
 
 
   # Pods for Program
