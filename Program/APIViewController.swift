@@ -11,82 +11,30 @@ import SwiftyJSON
 
 class APIViewController: UIViewController {
     
-    
-//    var datas = [Data]()
-    var Manager = APIManager()
-    var Manager_ALL = APIManager_ALL()
-    
-    
-
     @IBOutlet weak var coronaInfo: UITextView!
     @IBOutlet weak var coronaAll: UITextView!
     
-   
     
-//    func getData() {
-//
-//            AF.request("https://api.corona-19.kr/korea/country/new/?serviceKey=ohqQryHa9IUxPKRGTglfeVN1imsjZb6Fn", method: .get, parameters: [:], encoding: URLEncoding.default, headers:  ["Content-Type":"application/json;charset=utf-8"])
-//                        .validate()
-//                .responseJSON{ response in
-//
-//                    var resultjson: JSON
-//
-//                    switch response.result{
-//                    case .success(let value):
-//
-//                        resultjson = JSON(value)// api추출 값 json으로 변경
-//                        print(resultjson)
-//
-//
-//
-//                        let data = Data(resultjson["seoul"])
-//                        print(data)
-//
-//                        var AllInfo : String = ""
-//                        AllInfo = "\(resultjson)"
-//                      self.coronaAll.text = AllInfo // 전체 코로나 정보를 띄움
-                        
-
-//
-//                        var countryInfo : String = ""
-//                        countryInfo = "\(test)"
-//                        self.coronaInfo.text = countryInfo
-                    
-    //                        print(country)
-                
-//                    case .failure(let e): //실패 시
-//                        print(e.localizedDescription)
-//
-//
-//                    }
-//
-//                   }
-//
-//                }
-    
-    func ALL_GPS() {
-        let AllData: () = Manager_ALL.getData()
-        self.coronaAll.text = "\(AllData)"
-        
-    }
-    
-    func Area_GPS() {
-        
-    }
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        Manager.getData(area:"seoul")
-        
-        
-        
+        areaValue()
+            }
 
-        // Do any additional setup after loading the view.
+
+    func areaValue() { //지역 값
+        //어떻게 할까 고민중..
+        APIManager.getData("busan") { (isSuccess, persons) in //서울 지역 값을 밥아오고, boolen값에 통신성공 isSuccess 그리고 persons값을 넣어준다.
+            if isSuccess{
+                self.coronaAll.text = "\(persons)"
+            }
+        }
+        
     }
     
-
-    /*
+       
+    
+            
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -96,10 +44,8 @@ class APIViewController: UIViewController {
     }
     */
 
+
+    
 }
 
-//extension APIViewController:DataProtocol{
-//    func reData(data:[Data]) {
-////        self.datas = datas
-//    }
-//}
+

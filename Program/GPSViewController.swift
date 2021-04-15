@@ -83,12 +83,15 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
                 self.LocationInfo2.text = "지역:\t\(change_address)"  // address 문자열의 값 표시
                 
 
-                let get: () = self.Manager.getData(area: "gwangju")
-                print(get)
-                
-                if change_address == "광주광역시" {
-                    self.newCase.text = "내 지역의 확진자:\(get)"
+                APIManager.getData("gwangju") { (inSuccess, persons) in
+                    if change_address == "광주광역시" {
+                        self.newCase.text = "내 지역의 확진자:\(persons)"
+                        print(persons)
+                    }
                 }
+                
+
+                
                 
             }
 
