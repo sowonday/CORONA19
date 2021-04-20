@@ -19,6 +19,9 @@
 		154EFEA52604A10E00C05F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEA42604A10E00C05F41 /* Assets.xcassets */; };
 		154EFEA82604A10E00C05F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEA62604A10E00C05F41 /* LaunchScreen.storyboard */; };
 		1556264D26130453009458A1 /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556264C26130453009458A1 /* GPSViewController.swift */; };
+		155E0424262EFD1C0062D64B /* Gwangju.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E0423262EFD1C0062D64B /* Gwangju.swift */; };
+		155E0428262EFD240062D64B /* Seoul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E0427262EFD240062D64B /* Seoul.swift */; };
+		155E042B262EFD2D0062D64B /* Busan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E042A262EFD2D0062D64B /* Busan.swift */; };
 		1572563826242B0800010017 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1572563726242B0800010017 /* ChartViewController.swift */; };
 		C13AE79DE484ECDE1DFBF2BA /* Pods_Program.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70C9010A1D6467E9EF76FC3 /* Pods_Program.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		154EFEA72604A10E00C05F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		154EFEA92604A10E00C05F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1556264C26130453009458A1 /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
+		155E0423262EFD1C0062D64B /* Gwangju.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gwangju.swift; sourceTree = "<group>"; };
+		155E0427262EFD240062D64B /* Seoul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seoul.swift; sourceTree = "<group>"; };
+		155E042A262EFD2D0062D64B /* Busan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Busan.swift; sourceTree = "<group>"; };
 		1572563726242B0800010017 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		9F07B7D2EB642BDBA6851DC0 /* Pods-Program.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Program.debug.xcconfig"; path = "Target Support Files/Pods-Program/Pods-Program.debug.xcconfig"; sourceTree = "<group>"; };
 		C70C9010A1D6467E9EF76FC3 /* Pods_Program.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Program.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +76,7 @@
 		154EFE8C2604A10D00C05F41 = {
 			isa = PBXGroup;
 			children = (
+				155E0422262EFCFC0062D64B /* Area */,
 				1526B4FC26244588002B91E4 /* API */,
 				154EFE972604A10D00C05F41 /* Program */,
 				154EFE962604A10D00C05F41 /* Products */,
@@ -101,6 +108,16 @@
 				1572563726242B0800010017 /* ChartViewController.swift */,
 			);
 			path = Program;
+			sourceTree = "<group>";
+		};
+		155E0422262EFCFC0062D64B /* Area */ = {
+			isa = PBXGroup;
+			children = (
+				155E0423262EFD1C0062D64B /* Gwangju.swift */,
+				155E0427262EFD240062D64B /* Seoul.swift */,
+				155E042A262EFD2D0062D64B /* Busan.swift */,
+			);
+			path = Area;
 			sourceTree = "<group>";
 		};
 		93D28A999C51C4555AF5E59F /* Frameworks */ = {
@@ -240,7 +257,10 @@
 				1526B50A262473E8002B91E4 /* APIManager_ALL.swift in Sources */,
 				1572563826242B0800010017 /* ChartViewController.swift in Sources */,
 				1556264D26130453009458A1 /* GPSViewController.swift in Sources */,
+				155E0428262EFD240062D64B /* Seoul.swift in Sources */,
 				154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */,
+				155E042B262EFD2D0062D64B /* Busan.swift in Sources */,
+				155E0424262EFD1C0062D64B /* Gwangju.swift in Sources */,
 				154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */,
 				1526B50126244AF9002B91E4 /* Data.swift in Sources */,
 				153AA213260CDC1800691311 /* APIViewController.swift in Sources */,

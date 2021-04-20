@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftyJSON
+import Alamofire
 
 struct Data_ALL {
     
@@ -18,8 +19,11 @@ struct Data_ALL {
     var newCcase : Int
     var recovered : Int
     var countryName : String
+  
     
+
     init(_ json: JSON) {
+    
         percentage = json["percentage"].doubleValue
         newCase = json["newCase"].intValue
         death = json["death"].intValue
@@ -28,5 +32,6 @@ struct Data_ALL {
         newCcase = json["newCcase"].intValue
         recovered = json["recovered"].intValue
         countryName = json["countryName"].stringValue
+        
     }
 }

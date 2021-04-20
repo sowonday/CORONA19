@@ -77,18 +77,23 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
                 address += ""
                 address += pm!.administrativeArea!
                 let endldx:String.Index = address.index(address.startIndex,offsetBy:4) //address 맨 앞 대한민국 자름(string 자르기 사용) //https://urbangy.tistory.com/6 (출처 사이트)
-                var change_address = String(address[endldx...]) // 자른 것을 저장
+                let change_address = String(address[endldx...]) // 자른 것을 저장
                 
                 self.LocationInfo1.text = "<현재위치>" //레이블에 현재위치 텍스트 표시
                 self.LocationInfo2.text = "지역:\t\(change_address)"  // address 문자열의 값 표시
                 
-
-                APIManager.getData("gwangju") { (inSuccess, persons) in
-                    if change_address == "광주광역시" {
-                        self.newCase.text = "내 지역의 확진자:\(persons)"
-                        print(persons)
+                APIManager.getData { (isSuccess, resultjson) in
+                    if isSuccess{
+                        let gwangju = Data(resultjson["gwangju"])
+                        print(gwangju)
+                        if change_address == "광주광역시" {
+                            self.newCase.text = "\(gwangju)"
+                        }
                     }
+                    
                 }
+               
+              
                 
 
                 
