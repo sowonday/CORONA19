@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class APIViewController: UIViewController {
     
-    @IBOutlet weak var coronaInfo: UITextView!
+//    @IBOutlet weak var coronaInfo: UITextView!
     @IBOutlet weak var coronaAll: UITextView!
     
     let test : Gwangju = Gwangju()
@@ -20,30 +20,21 @@ class APIViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        seoul()
-        busan()
+        all_Info()
 
             }
 
-func seoul(){
+func all_Info(){
     APIManager_ALL.getData { (isSuccess, resultjson) in
         if isSuccess{
-            let seoul = Data_ALL(resultjson["seoul"])
+            let seoul = resultjson
             self.coronaAll.text = "\(seoul)"
             
         }
     }
 }
 
-    func busan() {
-        APIManager_ALL.getData { (isSuccess, resultjson) in
-            if isSuccess{
-                let busan = Data_ALL(resultjson["busan"])
-                self.coronaInfo.text = "\(busan)"
-            }
-        }
-    }
-    
+   
     
     
     

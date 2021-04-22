@@ -12,6 +12,7 @@
 		1526B50A262473E8002B91E4 /* APIManager_ALL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B509262473E8002B91E4 /* APIManager_ALL.swift */; };
 		1526B50E26247A07002B91E4 /* Data_ALL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B50D26247A07002B91E4 /* Data_ALL.swift */; };
 		153AA213260CDC1800691311 /* APIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AA212260CDC1800691311 /* APIViewController.swift */; };
+		1542AB9F26316FC00032A7F0 /* GPS_TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1542AB9E26316FC00032A7F0 /* GPS_TableView.swift */; };
 		154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE982604A10D00C05F41 /* AppDelegate.swift */; };
 		154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */; };
 		154EFEA02604A10D00C05F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFE9E2604A10D00C05F41 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		1526B509262473E8002B91E4 /* APIManager_ALL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager_ALL.swift; sourceTree = "<group>"; };
 		1526B50D26247A07002B91E4 /* Data_ALL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_ALL.swift; sourceTree = "<group>"; };
 		153AA212260CDC1800691311 /* APIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewController.swift; sourceTree = "<group>"; };
+		1542AB9E26316FC00032A7F0 /* GPS_TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPS_TableView.swift; sourceTree = "<group>"; };
 		154EFE952604A10D00C05F41 /* Program.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Program.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		154EFE982604A10D00C05F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				1526B4FD262445D2002B91E4 /* APIManager_area.swift */,
 				1526B50026244AF9002B91E4 /* Data.swift */,
 				1526B50D26247A07002B91E4 /* Data_ALL.swift */,
+				1542AB9E26316FC00032A7F0 /* GPS_TableView.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				1556264D26130453009458A1 /* GPSViewController.swift in Sources */,
 				155E0428262EFD240062D64B /* Seoul.swift in Sources */,
 				154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */,
+				1542AB9F26316FC00032A7F0 /* GPS_TableView.swift in Sources */,
 				155E042B262EFD2D0062D64B /* Busan.swift in Sources */,
 				155E0424262EFD1C0062D64B /* Gwangju.swift in Sources */,
 				154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */,

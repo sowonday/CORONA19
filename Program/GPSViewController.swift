@@ -11,19 +11,27 @@ import CoreLocation
 import SwiftyJSON
 
 class GPSViewController: UIViewController,CLLocationManagerDelegate {
-   
+    
+    
+
+    @IBOutlet weak var area_death: UITextField!
+    @IBOutlet weak var area_totalCase: UITextField!
+    @IBOutlet weak var area_newCase: UITextField!
+    @IBOutlet weak var area_countryName: UITextField!
     @IBOutlet weak var MyMap: MKMapView! //지도
     
-    @IBOutlet weak var LocationInfo1: UILabel!//위치정보
+//    @IBOutlet weak var LocationInfo1: UILabel!//위치정보
     
-    @IBOutlet weak var LocationInfo2: UITextView!//위치
-    @IBOutlet weak var LocationInfo3: UITextView!//상세 위치
+//    @IBOutlet weak var LocationInfo2: UITextView!//위치
+//    @IBOutlet weak var LocationInfo3: UITextView!//상세 위치
     
-    @IBOutlet weak var Locationla: UITextView!//위도
+//    @IBOutlet weak var Locationla: UITextView!//위도
     
 //    @IBOutlet weak var Locationlo: UITextView!//경도
     
-    @IBOutlet weak var newCase: UITextView! //코로나 신규확진자
+//    @IBOutlet weak var newCase: UITextView! //코로나 신규확진자
+    
+    @IBOutlet weak var gps_Tableview: UITableView!
     
     
     let locationManager = CLLocationManager()
@@ -35,8 +43,8 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
         super.viewDidLoad()
         
         
-        LocationInfo1.text = ""
-        LocationInfo2.text = ""
+//        LocationInfo1.text = ""
+//        LocationInfo2.text = ""
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest //정확도를 최고조로 설정
         locationManager.requestWhenInUseAuthorization() //위치데이터를 추적하기 위해 사용자에게 승인을 요구
@@ -53,6 +61,8 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
         MyMap.setRegion(pRegion, animated: true) //pRegion 값을 매개변수로 하여 mymap.setregion 함수를 호출
     }
     
+   
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let pLocation = locations.last // 위치가 업데이트되면 먼저 마지막 위치 값을 찾아냅니다.
@@ -64,38 +74,92 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
             let country = pm!.country  // 나라 값을 대입
             var address:String = country! // address에 country 값 대입
             
-                    if let locations = locations.first{
+//                    if let locations = locations.first{
+//            
+//                        var num1Text: String = "" //위도 경도 값 넣을 변수 추가
+//                         num1Text = "위도:\(locations.coordinate.latitude)\n경도:\(locations.coordinate.longitude)" //값 넣기
+//                        self.Locationla.text = num1Text //text에 출력
+//            
+//                                }
             
-                        var num1Text: String = "" //위도 경도 값 넣을 변수 추가
-                         num1Text = "위도:\(locations.coordinate.latitude)\n경도:\(locations.coordinate.longitude)" //값 넣기
-                        self.Locationla.text = num1Text //text에 출력
-            
-                                }
             
             
             if pm!.administrativeArea != nil{ //pm상수에 지역 존재시, address문자열에 추가
                 address += ""
                 address += pm!.administrativeArea!
                 let endldx:String.Index = address.index(address.startIndex,offsetBy:4) //address 맨 앞 대한민국 자름(string 자르기 사용) //https://urbangy.tistory.com/6 (출처 사이트)
-                let change_address = String(address[endldx...]) // 자른 것을 저장
-                
-                self.LocationInfo1.text = "<현재위치>" //레이블에 현재위치 텍스트 표시
-                self.LocationInfo2.text = "지역:\t\(change_address)"  // address 문자열의 값 표시
-                
+                var change_address = String(address[endldx...]) // 자른 것을 저장
+
+//                self.LocationInfo1.text = "<현재위치>" //레이블에 현재위치 텍스트 표시
+//
+//                self.LocationInfo2.text = "지역:\t\(change_address)"  // address 문자열의 값 표시
+                if change_address == "광주광역시" {
+                    change_address = "gwangju"
+                }
+                else if change_address == "충청남도"{
+                    change_address = "chungnam"
+                }
+                else if change_address == "충청북도"{
+                    change_address = "chungbuk"
+                }
+                else if change_address == "대전광역시"{
+                    change_address = "daejeon"
+                }
+                else if change_address == "경상북도"{
+                    change_address = "gyeongbuk"
+                }
+                else if change_address == "인천광역시"{
+                    change_address = "incheon"
+                }
+                else if change_address == "부산광역시"{
+                    change_address = "busan"
+                }
+                else if change_address == "울산광역시"{
+                    change_address = "ulsan"
+                }
+                else if change_address == "세종특별자치시"{
+                    change_address = "sejong"
+                }
+                else if change_address == "대구광역시"{
+                    change_address = "daegu"
+                }
+                else if change_address == "서울특별시"{
+                    change_address = "seoul"
+                }
+                else if change_address == "강원도"{
+                    change_address = "gangwon"
+                }
+                else if change_address == "경기도"{
+                    change_address = "gyeonggi"
+                }
+                else if change_address == "전라북도"{
+                    change_address = "jeonbuk"
+                }
+                else if change_address == "제주특별자치도"{
+                    change_address = "jeju"
+                }
+                else if change_address == "경상남도"{
+                    change_address = "gyeongnam"
+                }
+                else if change_address == "전라남도"{
+                    change_address = "jeonnam"
+                }
+
+
                 APIManager.getData { (isSuccess, resultjson) in
                     if isSuccess{
-                        let gwangju = Data(resultjson["gwangju"])
-                        print(gwangju)
-                        if change_address == "광주광역시" {
-                            self.newCase.text = "\(gwangju)"
-                        }
+                        let countryName = Data_ALL(resultjson[change_address]).countryName
+                        let newCase = Data_ALL(resultjson[change_address]).newCase
+                        let totalCase = Data_ALL(resultjson[change_address]).totalCase
+                        let death = Data_ALL(resultjson[change_address]).death
+                        
+                        self.area_countryName.text = "\(countryName)"
+                        self.area_newCase.text = "\(newCase)"
+                        self.area_totalCase.text = "\(totalCase)"
+                        self.area_death.text = "\(death)"
+                        
                     }
-                    
                 }
-               
-              
-                
-
                 
                 
             }
@@ -109,7 +173,8 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
                 address += ""
                 address += pm!.thoroughfare! // pm상수에 도로값이 존재하면 address문자열에 추가
             }
-            self.LocationInfo3.text = ("상세주소:\t\(address)")
+//            self.LocationInfo3.text = ("상세주소:\t\(address)")
+            
             
         })
         locationManager.startUpdatingLocation() // 위치가 업데이트 되는 것을 멈춤
@@ -129,6 +194,11 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
 
 }
 
+//extension GPSViewController:UITableViewDataSource{
+//
+//
+//
+//}
 
 
 

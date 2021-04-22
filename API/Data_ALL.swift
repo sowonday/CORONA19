@@ -15,7 +15,7 @@ struct Data_ALL {
     var newCase : Int
     var death : Int
     var newFcase : Int
-    var totalCase : Int
+    var totalCase : String
     var newCcase : Int
     var recovered : Int
     var countryName : String
@@ -28,7 +28,7 @@ struct Data_ALL {
         newCase = json["newCase"].intValue
         death = json["death"].intValue
         newFcase = json["newFcase"].intValue
-        totalCase = json["totalCase"].intValue
+        totalCase = json["totalCase"].stringValue
         newCcase = json["newCcase"].intValue
         recovered = json["recovered"].intValue
         countryName = json["countryName"].stringValue
