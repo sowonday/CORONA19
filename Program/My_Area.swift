@@ -143,26 +143,27 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate {
                 }
                 else if change_address == "전라남도"{
                     change_address = "jeonnam"
-                }
+                } //현재 위치와 대조
 
-
+         
+                
                 APIManager.getData { (isSuccess, resultjson) in
                     if isSuccess{
                         let countryName = Data_ALL(resultjson[change_address]).countryName
                         let newCase = Data_ALL(resultjson[change_address]).newCase
                         let totalCase = Data_ALL(resultjson[change_address]).totalCase
                         let death = Data_ALL(resultjson[change_address]).death
-                        
+
                         self.area_countryName.text = "\(countryName)"
                         self.area_newCase.text = "\(newCase)"
                         self.area_totalCase.text = "\(totalCase)"
                         self.area_death.text = "\(death)"
-                        
+
                     }
                 }
                 
                 
-            }
+            } //데이터를 label에 넣기
 
             if pm!.locality != nil{ //pm상수에 지엽 존재시, address문자열에 추가
                 address += ""

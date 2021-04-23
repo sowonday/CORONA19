@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1526B4FE262445D2002B91E4 /* APIManager_area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B4FD262445D2002B91E4 /* APIManager_area.swift */; };
+		1526B4FE262445D2002B91E4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B4FD262445D2002B91E4 /* APIManager.swift */; };
 		1526B50126244AF9002B91E4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B50026244AF9002B91E4 /* Data.swift */; };
-		1526B50A262473E8002B91E4 /* APIManager_ALL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B509262473E8002B91E4 /* APIManager_ALL.swift */; };
 		1526B50E26247A07002B91E4 /* Data_ALL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B50D26247A07002B91E4 /* Data_ALL.swift */; };
-		153AA213260CDC1800691311 /* APIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AA212260CDC1800691311 /* APIViewController.swift */; };
+		153AA213260CDC1800691311 /* All_Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AA212260CDC1800691311 /* All_Area.swift */; };
 		1542AB9F26316FC00032A7F0 /* GPS_TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1542AB9E26316FC00032A7F0 /* GPS_TableView.swift */; };
 		154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE982604A10D00C05F41 /* AppDelegate.swift */; };
 		154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */; };
@@ -19,7 +18,7 @@
 		154EFEA32604A10D00C05F41 /* Program.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 154EFEA12604A10D00C05F41 /* Program.xcdatamodeld */; };
 		154EFEA52604A10E00C05F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEA42604A10E00C05F41 /* Assets.xcassets */; };
 		154EFEA82604A10E00C05F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEA62604A10E00C05F41 /* LaunchScreen.storyboard */; };
-		1556264D26130453009458A1 /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556264C26130453009458A1 /* GPSViewController.swift */; };
+		1556264D26130453009458A1 /* My_Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556264C26130453009458A1 /* My_Area.swift */; };
 		155E0424262EFD1C0062D64B /* Gwangju.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E0423262EFD1C0062D64B /* Gwangju.swift */; };
 		155E0428262EFD240062D64B /* Seoul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E0427262EFD240062D64B /* Seoul.swift */; };
 		155E042B262EFD2D0062D64B /* Busan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E042A262EFD2D0062D64B /* Busan.swift */; };
@@ -28,13 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1526B4FD262445D2002B91E4 /* APIManager_area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager_area.swift; sourceTree = "<group>"; };
+		1526B4FD262445D2002B91E4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1526B50026244AF9002B91E4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		1526B509262473E8002B91E4 /* APIManager_ALL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager_ALL.swift; sourceTree = "<group>"; };
 		1526B50D26247A07002B91E4 /* Data_ALL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_ALL.swift; sourceTree = "<group>"; };
-		153AA212260CDC1800691311 /* APIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewController.swift; sourceTree = "<group>"; };
+		153AA212260CDC1800691311 /* All_Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_Area.swift; sourceTree = "<group>"; };
 		1542AB9E26316FC00032A7F0 /* GPS_TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPS_TableView.swift; sourceTree = "<group>"; };
-		154EFE952604A10D00C05F41 /* Program.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Program.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		154EFE952604A10D00C05F41 /* CORONA19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CORONA19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		154EFE982604A10D00C05F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		154EFE9F2604A10D00C05F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,7 +40,7 @@
 		154EFEA42604A10E00C05F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		154EFEA72604A10E00C05F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		154EFEA92604A10E00C05F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1556264C26130453009458A1 /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
+		1556264C26130453009458A1 /* My_Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Area.swift; sourceTree = "<group>"; };
 		155E0423262EFD1C0062D64B /* Gwangju.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gwangju.swift; sourceTree = "<group>"; };
 		155E0427262EFD240062D64B /* Seoul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seoul.swift; sourceTree = "<group>"; };
 		155E042A262EFD2D0062D64B /* Busan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Busan.swift; sourceTree = "<group>"; };
@@ -67,8 +65,7 @@
 		1526B4FC26244588002B91E4 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				1526B509262473E8002B91E4 /* APIManager_ALL.swift */,
-				1526B4FD262445D2002B91E4 /* APIManager_area.swift */,
+				1526B4FD262445D2002B91E4 /* APIManager.swift */,
 				1526B50026244AF9002B91E4 /* Data.swift */,
 				1526B50D26247A07002B91E4 /* Data_ALL.swift */,
 				1542AB9E26316FC00032A7F0 /* GPS_TableView.swift */,
@@ -91,7 +88,7 @@
 		154EFE962604A10D00C05F41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				154EFE952604A10D00C05F41 /* Program.app */,
+				154EFE952604A10D00C05F41 /* CORONA19.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,8 +103,8 @@
 				154EFEA62604A10E00C05F41 /* LaunchScreen.storyboard */,
 				154EFEA92604A10E00C05F41 /* Info.plist */,
 				154EFEA12604A10D00C05F41 /* Program.xcdatamodeld */,
-				153AA212260CDC1800691311 /* APIViewController.swift */,
-				1556264C26130453009458A1 /* GPSViewController.swift */,
+				153AA212260CDC1800691311 /* All_Area.swift */,
+				1556264C26130453009458A1 /* My_Area.swift */,
 				1572563726242B0800010017 /* ChartViewController.swift */,
 			);
 			path = Program;
@@ -143,9 +140,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		154EFE942604A10D00C05F41 /* Program */ = {
+		154EFE942604A10D00C05F41 /* CORONA19 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 154EFEAC2604A10E00C05F41 /* Build configuration list for PBXNativeTarget "Program" */;
+			buildConfigurationList = 154EFEAC2604A10E00C05F41 /* Build configuration list for PBXNativeTarget "CORONA19" */;
 			buildPhases = (
 				68E8CC2BA0D777B0038527AB /* [CP] Check Pods Manifest.lock */,
 				154EFE912604A10D00C05F41 /* Sources */,
@@ -157,9 +154,9 @@
 			);
 			dependencies = (
 			);
-			name = Program;
+			name = CORONA19;
 			productName = Program;
-			productReference = 154EFE952604A10D00C05F41 /* Program.app */;
+			productReference = 154EFE952604A10D00C05F41 /* CORONA19.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 154EFE902604A10D00C05F41 /* Build configuration list for PBXProject "Program" */;
+			buildConfigurationList = 154EFE902604A10D00C05F41 /* Build configuration list for PBXProject "CORONA19" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -189,7 +186,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				154EFE942604A10D00C05F41 /* Program */,
+				154EFE942604A10D00C05F41 /* CORONA19 */,
 			);
 		};
 /* End PBXProject section */
@@ -254,12 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1526B4FE262445D2002B91E4 /* APIManager_area.swift in Sources */,
+				1526B4FE262445D2002B91E4 /* APIManager.swift in Sources */,
 				1526B50E26247A07002B91E4 /* Data_ALL.swift in Sources */,
 				154EFEA32604A10D00C05F41 /* Program.xcdatamodeld in Sources */,
-				1526B50A262473E8002B91E4 /* APIManager_ALL.swift in Sources */,
 				1572563826242B0800010017 /* ChartViewController.swift in Sources */,
-				1556264D26130453009458A1 /* GPSViewController.swift in Sources */,
+				1556264D26130453009458A1 /* My_Area.swift in Sources */,
 				155E0428262EFD240062D64B /* Seoul.swift in Sources */,
 				154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */,
 				1542AB9F26316FC00032A7F0 /* GPS_TableView.swift in Sources */,
@@ -267,7 +263,7 @@
 				155E0424262EFD1C0062D64B /* Gwangju.swift in Sources */,
 				154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */,
 				1526B50126244AF9002B91E4 /* Data.swift in Sources */,
-				153AA213260CDC1800691311 /* APIViewController.swift in Sources */,
+				153AA213260CDC1800691311 /* All_Area.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +448,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		154EFE902604A10D00C05F41 /* Build configuration list for PBXProject "Program" */ = {
+		154EFE902604A10D00C05F41 /* Build configuration list for PBXProject "CORONA19" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				154EFEAA2604A10E00C05F41 /* Debug */,
@@ -461,7 +457,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		154EFEAC2604A10E00C05F41 /* Build configuration list for PBXNativeTarget "Program" */ = {
+		154EFEAC2604A10E00C05F41 /* Build configuration list for PBXNativeTarget "CORONA19" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				154EFEAD2604A10E00C05F41 /* Debug */,

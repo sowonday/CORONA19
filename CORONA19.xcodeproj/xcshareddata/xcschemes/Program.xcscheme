@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "154EFE942604A10D00C05F41"
-               BuildableName = "Program.app"
-               BlueprintName = "Program"
-               ReferencedContainer = "container:Program.xcodeproj">
+               BuildableName = "CORONA19.app"
+               BlueprintName = "CORONA19"
+               ReferencedContainer = "container:CORONA19.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "154EFE942604A10D00C05F41"
-            BuildableName = "Program.app"
-            BlueprintName = "Program"
-            ReferencedContainer = "container:Program.xcodeproj">
+            BuildableName = "CORONA19.app"
+            BlueprintName = "CORONA19"
+            ReferencedContainer = "container:CORONA19.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "154EFE942604A10D00C05F41"
-            BuildableName = "Program.app"
-            BlueprintName = "Program"
-            ReferencedContainer = "container:Program.xcodeproj">
+            BuildableName = "CORONA19.app"
+            BlueprintName = "CORONA19"
+            ReferencedContainer = "container:CORONA19.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
