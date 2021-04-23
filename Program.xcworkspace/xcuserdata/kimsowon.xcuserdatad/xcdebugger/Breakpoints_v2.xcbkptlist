@@ -52,5 +52,68 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1A12880-A2DB-4150-A35E-5BD90E663B2C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Program/APIViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "APIViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "F1A12880-A2DB-4150-A35E-5BD90E663B2C - c82f6cea59cd16df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Program.APIViewController.test.getter : Program.Gwangju"
+                  moduleName = "Program"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsowon/Desktop/Program/Program/APIViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "F1A12880-A2DB-4150-A35E-5BD90E663B2C - 20ef2386774b3a06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Program.APIViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Program.APIViewController"
+                  moduleName = "Program"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsowon/Desktop/Program/Program/APIViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "F1A12880-A2DB-4150-A35E-5BD90E663B2C - cf7423015968c195"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Program.APIViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Program.APIViewController&gt;"
+                  moduleName = "Program"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsowon/Desktop/Program/Program/APIViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

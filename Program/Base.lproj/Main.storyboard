@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mfr-ds-d5Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mQo-Sw-8kT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CORONA_19-->
-        <scene sceneID="oA8-1Y-UbP">
+        <!--다른지역보기-->
+        <scene sceneID="sIK-0o-aPf">
             <objects>
-                <viewController id="Ykq-A0-jV5" customClass="APIViewController" customModule="Program" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JK4-sm-hOU">
+                <viewController id="OnE-qe-NfS" customClass="APIViewController" customModule="Program" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Raa-mv-dZf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hl3-HA-T0j">
-                                <rect key="frame" x="20" y="0.0" width="374" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -26,59 +26,22 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="q2j-aO-r2J"/>
+                        <viewLayoutGuide key="safeArea" id="vAz-Ge-PLE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CORONA_19" id="LlE-km-WGO">
-                        <barButtonItem key="leftBarButtonItem" image="chart.bar.fill" catalog="system" style="plain" id="GPB-mx-gk1">
-                            <connections>
-                                <segue destination="GNl-h1-a47" kind="show" id="H1Z-W5-t8Q"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aKk-Cw-LoR">
-                            <connections>
-                                <segue destination="Nr5-ge-Wg0" kind="show" id="G1f-o3-UQp"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="다른지역보기" id="yCc-d8-qwv"/>
                     <connections>
-                        <outlet property="coronaAll" destination="Hl3-HA-T0j" id="M2a-0f-65c"/>
+                        <outlet property="coronaAll" destination="Hl3-HA-T0j" id="UYX-aq-pmc"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="75K-vU-nGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5M-WW-8Ia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="513.04347826086962" y="66.964285714285708"/>
+            <point key="canvasLocation" x="4531.884057971015" y="205.58035714285714"/>
         </scene>
-        <!--Chart View Controller-->
-        <scene sceneID="HEP-iU-Amd">
-            <objects>
-                <viewController id="GNl-h1-a47" customClass="ChartViewController" customModule="Program" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="toX-WQ-fqm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-mR-cQu" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="165" width="414" height="567"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="4yB-cx-U3a"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Hqc-xR-m8C"/>
-                    <connections>
-                        <outlet property="LineChart" destination="qe0-mR-cQu" id="Jt0-eQ-baQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fge-8F-vfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1069.5652173913045" y="-644.19642857142856"/>
-        </scene>
-        <!--View Controller-->
+        <!--My_Area-->
         <scene sceneID="gJ9-Sg-L4O">
             <objects>
-                <viewController id="Nr5-ge-Wg0" customClass="GPSViewController" customModule="Program" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My_Area" id="Nr5-ge-Wg0" customClass="GPSViewController" customModule="Program" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vyD-BL-Sgc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,60 +55,60 @@
                                 </segments>
                             </segmentedControl>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0pW-OR-3ZU">
-                                <rect key="frame" x="20" y="101" width="374" height="288"/>
+                                <rect key="frame" x="20" y="191" width="374" height="288"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nor-8d-bp6">
-                                <rect key="frame" x="210" y="417" width="184" height="34"/>
+                                <rect key="frame" x="210" y="507" width="184" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4F-7Y-BL3">
-                                <rect key="frame" x="210" y="484" width="184" height="34"/>
+                                <rect key="frame" x="210" y="574" width="184" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="0.41311619328797622" blue="0.5486240446097107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLu-IS-iHs">
-                                <rect key="frame" x="210" y="556" width="184" height="34"/>
+                                <rect key="frame" x="210" y="646" width="184" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="0.41311619329999999" blue="0.54862404460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9NE-PU-4vA">
-                                <rect key="frame" x="210" y="629" width="184" height="34"/>
+                                <rect key="frame" x="210" y="719" width="184" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="지역" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpo-Cq-lWD">
-                                <rect key="frame" x="20" y="417" width="145" height="34"/>
+                                <rect key="frame" x="20" y="507" width="145" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="오늘 확진자" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOI-Hb-T2Z">
-                                <rect key="frame" x="20" y="484" width="145" height="34"/>
+                                <rect key="frame" x="20" y="574" width="145" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="총 확진자" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Q8-WT-VAz">
-                                <rect key="frame" x="20" y="556" width="145" height="34"/>
+                                <rect key="frame" x="20" y="646" width="145" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="총 사망자" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rYH-Hb-6sg">
-                                <rect key="frame" x="20" y="629" width="145" height="34"/>
+                                <rect key="frame" x="20" y="719" width="145" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -155,7 +118,7 @@
                         <viewLayoutGuide key="safeArea" id="wdr-vl-AX8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="K5T-j1-mug"/>
+                    <navigationItem key="navigationItem" title="내 지역의 확진자는?" largeTitleDisplayMode="always" id="K5T-j1-mug"/>
                     <connections>
                         <outlet property="MyMap" destination="0pW-OR-3ZU" id="Y1G-aE-J2d"/>
                         <outlet property="area_countryName" destination="Nor-8d-bp6" id="sOi-Hl-XIT"/>
@@ -166,34 +129,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWJ-5l-6TZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549.2753623188407" y="66.964285714285708"/>
+            <point key="canvasLocation" x="5198.5507246376819" y="-573.21428571428567"/>
         </scene>
-        <!--CORONA19-->
-        <scene sceneID="saB-iF-RPB">
+        <!--CORONA-_19-->
+        <scene sceneID="kbD-uK-DaN">
             <objects>
-                <navigationController title="CORONA19" automaticallyAdjustsScrollViewInsets="NO" id="Mfr-ds-d5Z" sceneMemberID="viewController">
+                <tabBarController title="CORONA-_19" automaticallyAdjustsScrollViewInsets="NO" id="mQo-Sw-8kT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="isZ-9P-CjU">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r3x-sL-w0u">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cwr-g2-c4R" kind="relationship" relationship="viewControllers" id="bhD-Xk-0oo"/>
+                        <segue destination="x1m-2T-Ukk" kind="relationship" relationship="viewControllers" id="jid-3l-Lh3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wno-gW-rJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3379.7101449275365" y="-573.21428571428567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X1S-d2-5eR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cwr-g2-c4R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" image="My_area" id="v9A-F5-AY6">
+                        <inset key="imageInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="4nd-Nu-JLa">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ykq-A0-jV5" kind="relationship" relationship="rootViewController" id="Ydr-fW-S2G"/>
+                        <segue destination="Nr5-ge-Wg0" kind="relationship" relationship="rootViewController" id="gJc-FJ-FYc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ioj-Qa-0JD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEC-Y1-XmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-397.10144927536237" y="66.964285714285708"/>
+            <point key="canvasLocation" x="4288.4057971014499" y="-573.21428571428567"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="B2h-5z-wOp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x1m-2T-Ukk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="All_area" id="Vuq-0d-YUx">
+                        <inset key="imageInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="b80-zw-UTu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OnE-qe-NfS" kind="relationship" relationship="rootViewController" id="3lO-Fw-5S3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FzN-FF-6Kl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3621.739130434783" y="205.58035714285714"/>
         </scene>
     </scenes>
     <resources>
-        <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
+        <image name="All_area" width="55.666667938232422" height="55.666667938232422"/>
+        <image name="My_area" width="55.666667938232422" height="55.666667938232422"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
