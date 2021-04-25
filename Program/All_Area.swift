@@ -9,7 +9,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class APIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+class AllAreaViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+    
+    @IBOutlet weak var pickerArea: UIPickerView!
+    @IBOutlet weak var pickArea: UITextField!
+    @IBOutlet weak var pickNewCase: UITextField!
+    @IBOutlet weak var pickTotalCase: UITextField!
+    @IBOutlet weak var pickDeath: UITextField!
+    
     let Area_Array = 17
     let Picker_View_Column = 1
     
@@ -86,36 +93,34 @@ class APIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataS
         } //현재 위치와 대조
         
        
-        APIManager.getData { (isSuccess, resultjson) in
+        APIManager.getData { [self] (isSuccess, resultjson) in
             if isSuccess{
-                let pick_area = Data_ALL(resultjson[change_address]).countryName
+                
+//                let pick_area = Data_ALL(resultjson[change_address]).countryName
+                
+                
                 let pick_newcase = Data_ALL(resultjson[change_address]).newCase
                 let pick_total = Data_ALL(resultjson[change_address]).totalCase
                 let pick_death = Data_ALL(resultjson[change_address]).death
                 
-                self.pickArea.text = "\(pick_area)"
+                self.pickArea.text = "\(Picker_Area[row])"
                 self.pickNewCase.text = "\(pick_newcase)"
                 self.pickTotalCase.text = "\(pick_total)"
                 self.pickDeath.text = "\(pick_death)"
+                //가져온 값을 text에 넣어주기
+                pickArea.isUserInteractionEnabled = false
+                pickNewCase.isUserInteractionEnabled = false
+                pickTotalCase.isUserInteractionEnabled = false
+                pickDeath.isUserInteractionEnabled = false
+                //값 수정 불가능
             }
         }
         
         }
-        
-    
-    
-    
-//    @IBOutlet weak var coronaInfo: UITextView!
 
-    @IBOutlet weak var pickerArea: UIPickerView!
-    @IBOutlet weak var pickArea: UITextField!
-    @IBOutlet weak var pickNewCase: UITextField!
-    @IBOutlet weak var pickTotalCase: UITextField!
-    @IBOutlet weak var pickDeath: UITextField!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
 
             }
 
@@ -140,3 +145,5 @@ class APIViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataS
 
 
 }
+
+
