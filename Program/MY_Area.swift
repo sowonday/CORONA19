@@ -10,14 +10,14 @@ import MapKit
 import CoreLocation
 import SwiftyJSON
 
-class MyAreaViewController: UIViewController,CLLocationManagerDelegate {
+class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
     
     
 
-    @IBOutlet weak var area_death: UITextField!
-    @IBOutlet weak var area_totalCase: UITextField!
-    @IBOutlet weak var area_newCase: UITextField!
-    @IBOutlet weak var area_countryName: UITextField!
+    @IBOutlet weak var area_death: UITextField! //사망자
+    @IBOutlet weak var area_totalCase: UITextField! // 전체 확진자
+    @IBOutlet weak var area_newCase: UITextField! //오늘의 확진자
+    @IBOutlet weak var area_countryName: UITextField! // 지역명
     @IBOutlet weak var area_Map: MKMapView! //지도
     //    @IBOutlet weak var LocationInfo1: UILabel!//위치정보
     
@@ -30,7 +30,6 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate {
     
 //    @IBOutlet weak var newCase: UITextView! //코로나 신규확진자
     
-    @IBOutlet weak var gps_Tableview: UITableView!
     
     
     let locationManager = CLLocationManager()
@@ -41,9 +40,17 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+            let leftSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:))) //왼쪽으로 넘기면(<-)
+            let rightSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))//오른쪽으로 넘기면(->)
+                
+            leftSwipeGestureRecognizer.direction = .left //방향 왼쪽
+            rightSwipeGestureRecognizer.direction = .right //방향 오른쪽
+
+            view.addGestureRecognizer(leftSwipeGestureRecognizer) //화면인식
+            view.addGestureRecognizer(rightSwipeGestureRecognizer)//화면인식
+
         
-//        LocationInfo1.text = ""
-//        LocationInfo2.text = ""
+
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest //정확도를 최고조로 설정
         locationManager.requestWhenInUseAuthorization() //위치데이터를 추적하기 위해 사용자에게 승인을 요구
@@ -51,6 +58,16 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate {
         area_Map.showsUserLocation = true // 위치 값 보기를 true로 설정
         
     }
+    
+   
+    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+        if sender.direction == .left { //왼쪽으로 하면
+            tabBarController?.selectedIndex = 1 //index1 보여주기
+                    
+          }
+    } //손으로 tab bar 넘기기
+
+
     
     func goLocation(latitudeValue: CLLocationDegrees, longitudeValue: CLLocationDegrees, delta span: Double) // 입력파라미터: 위도 값, 경도 값, 범위
     {
@@ -167,7 +184,7 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate {
                 }
                 
                 
-            } //데이터를 label에 넣기
+            } //api에서 받아온 값을 label에 넣은 후 화면에 띄워줌
 
             if pm!.locality != nil{ //pm상수에 지엽 존재시, address문자열에 추가
                 address += ""
@@ -185,6 +202,10 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate {
         locationManager.startUpdatingLocation() // 위치가 업데이트 되는 것을 멈춤
     }
     
+   
+
+
+
 
     /*
     // MARK: - Navigation
@@ -197,13 +218,7 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate {
     */
     
 
+
+
 }
-
-//extension GPSViewController:UITableViewDataSource{
-//
-//
-//
-//}
-
-
 

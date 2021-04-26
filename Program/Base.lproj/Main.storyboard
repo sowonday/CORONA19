@@ -113,6 +113,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vAz-Ge-PLE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="haC-B9-JPb" appends="YES" id="HKd-9M-o5F"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="다른지역보기" id="yCc-d8-qwv"/>
                     <connections>
@@ -124,6 +128,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5M-WW-8Ia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="haC-B9-JPb"/>
             </objects>
             <point key="canvasLocation" x="4531.884057971015" y="205.58035714285714"/>
         </scene>
@@ -225,6 +230,10 @@
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" notEnabled="YES"/>
                         </accessibility>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mKO-J9-eNK" appends="YES" id="cVj-iR-6e5"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="내 지역의 확진자는?" largeTitleDisplayMode="always" id="K5T-j1-mug"/>
                     <connections>
@@ -236,6 +245,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWJ-5l-6TZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="mKO-J9-eNK"/>
             </objects>
             <point key="canvasLocation" x="5198.5507246376819" y="-573.21428571428567"/>
         </scene>

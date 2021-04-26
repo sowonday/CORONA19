@@ -117,15 +117,29 @@ class AllAreaViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         }
         
         }
+    
+    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+        if sender.direction == .right { //오른쪽으로 넘겨주면
+            tabBarController?.selectedIndex = 0 //index 0보여주기
+                    
+          }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        let leftSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:))) //왼쪽으로 넘기면(<-)
+        let rightSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))//오른쪽으로 넘기면(->)
+            
+        leftSwipeGestureRecognizer.direction = .left //방향 왼쪽
+        rightSwipeGestureRecognizer.direction = .right //방향 오른쪽
+
+        view.addGestureRecognizer(leftSwipeGestureRecognizer) //화면인식
+        view.addGestureRecognizer(rightSwipeGestureRecognizer)//화면인식
 
             }
 
-
-   
+  
     
     
     

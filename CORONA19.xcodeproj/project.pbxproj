@@ -11,7 +11,6 @@
 		1526B50126244AF9002B91E4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B50026244AF9002B91E4 /* Data.swift */; };
 		1526B50E26247A07002B91E4 /* Data_ALL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B50D26247A07002B91E4 /* Data_ALL.swift */; };
 		153AA213260CDC1800691311 /* All_Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AA212260CDC1800691311 /* All_Area.swift */; };
-		1542AB9F26316FC00032A7F0 /* GPS_TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1542AB9E26316FC00032A7F0 /* GPS_TableView.swift */; };
 		154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE982604A10D00C05F41 /* AppDelegate.swift */; };
 		154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */; };
 		154EFEA02604A10D00C05F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFE9E2604A10D00C05F41 /* Main.storyboard */; };
@@ -19,9 +18,7 @@
 		154EFEA52604A10E00C05F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEA42604A10E00C05F41 /* Assets.xcassets */; };
 		154EFEA82604A10E00C05F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEA62604A10E00C05F41 /* LaunchScreen.storyboard */; };
 		1556264D26130453009458A1 /* MY_Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556264C26130453009458A1 /* MY_Area.swift */; };
-		1572563826242B0800010017 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1572563726242B0800010017 /* ChartViewController.swift */; };
-		1586DDDE26359C3F00F1A7F2 /* TabBarControllerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1586DDDD26359C3F00F1A7F2 /* TabBarControllerMainViewController.swift */; };
-		C13AE79DE484ECDE1DFBF2BA /* Pods_Program.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70C9010A1D6467E9EF76FC3 /* Pods_Program.framework */; };
+		58019FA58F6C7D19817823B6 /* Pods_CORONA19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5160390D8613DD01B24395F /* Pods_CORONA19.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +26,6 @@
 		1526B50026244AF9002B91E4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		1526B50D26247A07002B91E4 /* Data_ALL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_ALL.swift; sourceTree = "<group>"; };
 		153AA212260CDC1800691311 /* All_Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_Area.swift; sourceTree = "<group>"; };
-		1542AB9E26316FC00032A7F0 /* GPS_TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPS_TableView.swift; sourceTree = "<group>"; };
 		154EFE952604A10D00C05F41 /* CORONA19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CORONA19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		154EFE982604A10D00C05F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,11 +35,11 @@
 		154EFEA72604A10E00C05F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		154EFEA92604A10E00C05F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1556264C26130453009458A1 /* MY_Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MY_Area.swift; sourceTree = "<group>"; };
-		1572563726242B0800010017 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
-		1586DDDD26359C3F00F1A7F2 /* TabBarControllerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerMainViewController.swift; sourceTree = "<group>"; };
 		9F07B7D2EB642BDBA6851DC0 /* Pods-Program.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Program.debug.xcconfig"; path = "Target Support Files/Pods-Program/Pods-Program.debug.xcconfig"; sourceTree = "<group>"; };
-		C70C9010A1D6467E9EF76FC3 /* Pods_Program.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Program.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5160390D8613DD01B24395F /* Pods_CORONA19.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CORONA19.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4C314F63D9FD8C2E8C56EA /* Pods-CORONA19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CORONA19.debug.xcconfig"; path = "Target Support Files/Pods-CORONA19/Pods-CORONA19.debug.xcconfig"; sourceTree = "<group>"; };
 		EA641706AF6D67F512692569 /* Pods-Program.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Program.release.xcconfig"; path = "Target Support Files/Pods-Program/Pods-Program.release.xcconfig"; sourceTree = "<group>"; };
+		F34E73D7EFF1B049F08F06D5 /* Pods-CORONA19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CORONA19.release.xcconfig"; path = "Target Support Files/Pods-CORONA19/Pods-CORONA19.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C13AE79DE484ECDE1DFBF2BA /* Pods_Program.framework in Frameworks */,
+				58019FA58F6C7D19817823B6 /* Pods_CORONA19.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +60,6 @@
 				1526B4FD262445D2002B91E4 /* APIManager.swift */,
 				1526B50026244AF9002B91E4 /* Data.swift */,
 				1526B50D26247A07002B91E4 /* Data_ALL.swift */,
-				1542AB9E26316FC00032A7F0 /* GPS_TableView.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -100,8 +95,6 @@
 				154EFEA12604A10D00C05F41 /* Program.xcdatamodeld */,
 				1556264C26130453009458A1 /* MY_Area.swift */,
 				153AA212260CDC1800691311 /* All_Area.swift */,
-				1572563726242B0800010017 /* ChartViewController.swift */,
-				1586DDDD26359C3F00F1A7F2 /* TabBarControllerMainViewController.swift */,
 			);
 			path = Program;
 			sourceTree = "<group>";
@@ -109,7 +102,7 @@
 		93D28A999C51C4555AF5E59F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C70C9010A1D6467E9EF76FC3 /* Pods_Program.framework */,
+				D5160390D8613DD01B24395F /* Pods_CORONA19.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,6 +112,8 @@
 			children = (
 				9F07B7D2EB642BDBA6851DC0 /* Pods-Program.debug.xcconfig */,
 				EA641706AF6D67F512692569 /* Pods-Program.release.xcconfig */,
+				DD4C314F63D9FD8C2E8C56EA /* Pods-CORONA19.debug.xcconfig */,
+				F34E73D7EFF1B049F08F06D5 /* Pods-CORONA19.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -197,15 +192,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Program/Pods-Program-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CORONA19/Pods-CORONA19-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Program/Pods-Program-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CORONA19/Pods-CORONA19-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Program/Pods-Program-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CORONA19/Pods-CORONA19-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		68E8CC2BA0D777B0038527AB /* [CP] Check Pods Manifest.lock */ = {
@@ -223,7 +218,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Program-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CORONA19-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -238,13 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1526B4FE262445D2002B91E4 /* APIManager.swift in Sources */,
-				1586DDDE26359C3F00F1A7F2 /* TabBarControllerMainViewController.swift in Sources */,
 				1526B50E26247A07002B91E4 /* Data_ALL.swift in Sources */,
 				154EFEA32604A10D00C05F41 /* Program.xcdatamodeld in Sources */,
-				1572563826242B0800010017 /* ChartViewController.swift in Sources */,
 				1556264D26130453009458A1 /* MY_Area.swift in Sources */,
 				154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */,
-				1542AB9F26316FC00032A7F0 /* GPS_TableView.swift in Sources */,
 				154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */,
 				1526B50126244AF9002B91E4 /* Data.swift in Sources */,
 				153AA213260CDC1800691311 /* All_Area.swift in Sources */,
@@ -324,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -379,9 +371,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -391,13 +384,15 @@
 		};
 		154EFEAD2604A10E00C05F41 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F07B7D2EB642BDBA6851DC0 /* Pods-Program.debug.xcconfig */;
+			baseConfigurationReference = DD4C314F63D9FD8C2E8C56EA /* Pods-CORONA19.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8T3XB3B3S;
 				INFOPLIST_FILE = Program/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,17 +406,20 @@
 		};
 		154EFEAE2604A10E00C05F41 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA641706AF6D67F512692569 /* Pods-Program.release.xcconfig */;
+			baseConfigurationReference = F34E73D7EFF1B049F08F06D5 /* Pods-CORONA19.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8T3XB3B3S;
 				INFOPLIST_FILE = Program/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = sowon.Program;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

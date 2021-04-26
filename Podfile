@@ -1,16 +1,15 @@
-
+# Uncomment the next line to define a global platform for your project
 platform :ios, '14.4'
 
-target 'Program' do
-  
+target 'CORONA19' do
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 	pod 'SwiftyJSON', '~> 4.0'
 	pod 'Alamofire', '~> 5.2'
 	pod "SwiftyXMLParser", :git => 'https://github.com/yahoojapan/SwiftyXMLParser.git'
-	pod 'Charts'
-	pod 'ChartsRealm'
 
 
-  # Pods for Program
+
+  # Pods for CORONA19
 
 end
