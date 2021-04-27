@@ -11,6 +11,8 @@
 		1526B50126244AF9002B91E4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B50026244AF9002B91E4 /* Data.swift */; };
 		1526B50E26247A07002B91E4 /* Data_ALL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B50D26247A07002B91E4 /* Data_ALL.swift */; };
 		153AA213260CDC1800691311 /* All_Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AA212260CDC1800691311 /* All_Area.swift */; };
+		154DF5472637E7EC00294A5A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154DF5462637E7EC00294A5A /* Network.swift */; };
+		154DF54A2637FFAC00294A5A /* Wifi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154DF5492637FFAC00294A5A /* Wifi.swift */; };
 		154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE982604A10D00C05F41 /* AppDelegate.swift */; };
 		154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */; };
 		154EFEA02604A10D00C05F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFE9E2604A10D00C05F41 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		1526B50026244AF9002B91E4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		1526B50D26247A07002B91E4 /* Data_ALL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_ALL.swift; sourceTree = "<group>"; };
 		153AA212260CDC1800691311 /* All_Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_Area.swift; sourceTree = "<group>"; };
+		154DF5462637E7EC00294A5A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		154DF5492637FFAC00294A5A /* Wifi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wifi.swift; sourceTree = "<group>"; };
 		154EFE952604A10D00C05F41 /* CORONA19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CORONA19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		154EFE982604A10D00C05F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,9 +68,19 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		154DF5452637E7C900294A5A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				154DF5462637E7EC00294A5A /* Network.swift */,
+				154DF5492637FFAC00294A5A /* Wifi.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		154EFE8C2604A10D00C05F41 = {
 			isa = PBXGroup;
 			children = (
+				154DF5452637E7C900294A5A /* Network */,
 				1526B4FC26244588002B91E4 /* API */,
 				154EFE972604A10D00C05F41 /* Program */,
 				154EFE962604A10D00C05F41 /* Products */,
@@ -237,6 +251,8 @@
 				154EFEA32604A10D00C05F41 /* Program.xcdatamodeld in Sources */,
 				1556264D26130453009458A1 /* MY_Area.swift in Sources */,
 				154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */,
+				154DF5472637E7EC00294A5A /* Network.swift in Sources */,
+				154DF54A2637FFAC00294A5A /* Wifi.swift in Sources */,
 				154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */,
 				1526B50126244AF9002B91E4 /* Data.swift in Sources */,
 				153AA213260CDC1800691311 /* All_Area.swift in Sources */,

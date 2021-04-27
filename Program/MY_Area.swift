@@ -10,15 +10,16 @@ import MapKit
 import CoreLocation
 import SwiftyJSON
 
-class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
-    
-    
 
+class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
+ 
+    
+    
     @IBOutlet weak var area_death: UITextField! //사망자
     @IBOutlet weak var area_totalCase: UITextField! // 전체 확진자
     @IBOutlet weak var area_newCase: UITextField! //오늘의 확진자
     @IBOutlet weak var area_countryName: UITextField! // 지역명
-    @IBOutlet weak var area_Map: MKMapView! //지도
+//    @IBOutlet weak var area_Map: MKMapView! //지도
     //    @IBOutlet weak var LocationInfo1: UILabel!//위치정보
     
 //    @IBOutlet weak var LocationInfo2: UITextView!//위치
@@ -35,7 +36,7 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
     let locationManager = CLLocationManager()
     
     var Manager = APIManager() // getData(지역)
-    
+    let reachability = try! Reachability()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,32 +50,86 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
             view.addGestureRecognizer(leftSwipeGestureRecognizer) //화면인식
             view.addGestureRecognizer(rightSwipeGestureRecognizer)//화면인식
 
-        
-
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest //정확도를 최고조로 설정
         locationManager.requestWhenInUseAuthorization() //위치데이터를 추적하기 위해 사용자에게 승인을 요구
         locationManager.startUpdatingLocation()//위치 업데이트 시작
-        area_Map.showsUserLocation = true // 위치 값 보기를 true로 설정
+//        area_Map.showsUserLocation = true // 위치 값 보기를 true로 설정
+
         
     }
     
-   
     @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
         if sender.direction == .left { //왼쪽으로 하면
             tabBarController?.selectedIndex = 1 //index1 보여주기
                     
           }
     } //손으로 tab bar 넘기기
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+          NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+          do {
+              try reachability.startNotifier()
+          } catch {
+              print("Unable to start notifier")
+          }
+      }
 
+      @objc func reachabilityChanged(note: Notification) {
+          let reachability = note.object as! Reachability
+
+          switch reachability.connection {
+          case .wifi:
+              print("Wifi Connection")
+              
+          case .cellular:
+              print("Cellular Connection")
+              
+          case .unavailable:
+              print("No Connection")
+            let alert = UIAlertController(title: "경고", message: "네트워크 연결을 확인해주세요.", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+
+                   }
+//            let setAction = UIAlertAction(title: "설정", style: .destructive) { (action:UIAlertAction)-> Void in self.dismiss(animated: true, completion: nil)
+//            }
+            
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+             
+          case .none:
+              print("No Connection")
+            let alert = UIAlertController(title: "경고!!!", message: "네트워크 연결을 확인해주세요.", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+
+                   }
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+
+
+          }
+      }
+
+      override func viewDidDisappear(_ animated: Bool) {
+          super.viewDidDisappear(animated)
+          reachability.stopNotifier()
+          NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
+      }
+  
 
     
+   
+   
+
+
+
     func goLocation(latitudeValue: CLLocationDegrees, longitudeValue: CLLocationDegrees, delta span: Double) // 입력파라미터: 위도 값, 경도 값, 범위
     {
         let pLocation = CLLocationCoordinate2DMake(latitudeValue, longitudeValue) // 위경도를 매개변수로 하여 2DMake 함수를 호출하고, 리턴 값을 pLocation으로 받는다
         let spanValue = MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span) //범위 값을 매개변수로 하여 spanValue로 받는다
-        let pRegion = MKCoordinateRegion(center: pLocation, span: spanValue) //Plocation과 spanvalue를 매개변수로 하여 리턴 값을 pRegion으로 받는다.
-        area_Map.setRegion(pRegion, animated: true) //pRegion 값을 매개변수로 하여 mymap.setregion 함수를 호출
+       let pRegion = MKCoordinateRegion(center: pLocation, span: spanValue) //Plocation과 spanvalue를 매개변수로 하여 리턴 값을 pRegion으로 받는다.
+//        area_Map.setRegion(pRegion, animated: true) //pRegion 값을 매개변수로 하여 mymap.setregion 함수를 호출
     }
     
    
@@ -221,4 +276,5 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
 
 
 }
+
 
