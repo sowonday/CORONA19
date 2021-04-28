@@ -20,6 +20,7 @@
 		1558B06E26393E040054475B /* Newwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558B06D26393E040054475B /* Newwork.swift */; };
 		1558B071263946FA0054475B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1558B070263946FA0054475B /* Main.storyboard */; };
 		1558B07626394DA00054475B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558B07526394DA00054475B /* SplashViewController.swift */; };
+		15ED31BC2639A0B500FF8CF1 /* Neting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ED31BB2639A0B500FF8CF1 /* Neting.swift */; };
 		58019FA58F6C7D19817823B6 /* Pods_CORONA19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5160390D8613DD01B24395F /* Pods_CORONA19.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		1558B06D26393E040054475B /* Newwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Newwork.swift; sourceTree = "<group>"; };
 		1558B070263946FA0054475B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1558B07526394DA00054475B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		15ED31BB2639A0B500FF8CF1 /* Neting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neting.swift; sourceTree = "<group>"; };
 		9F07B7D2EB642BDBA6851DC0 /* Pods-Program.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Program.debug.xcconfig"; path = "Target Support Files/Pods-Program/Pods-Program.debug.xcconfig"; sourceTree = "<group>"; };
 		D5160390D8613DD01B24395F /* Pods_CORONA19.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CORONA19.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4C314F63D9FD8C2E8C56EA /* Pods-CORONA19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CORONA19.debug.xcconfig"; path = "Target Support Files/Pods-CORONA19/Pods-CORONA19.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				1558B06D26393E040054475B /* Newwork.swift */,
+				15ED31BB2639A0B500FF8CF1 /* Neting.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */,
 				1558B06E26393E040054475B /* Newwork.swift in Sources */,
 				154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */,
+				15ED31BC2639A0B500FF8CF1 /* Neting.swift in Sources */,
 				153AA213260CDC1800691311 /* All_Area.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

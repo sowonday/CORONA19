@@ -35,7 +35,7 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
     
     
     let locationManager = CLLocationManager()
-    
+    let reachability = try! Reachability()
 
     
     override func viewDidLoad() {
@@ -59,6 +59,54 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+             NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+             do {
+                 try reachability.startNotifier()
+             } catch {
+                 print("Unable to start notifier")
+             }
+         }
+
+         @objc func reachabilityChanged(note: Notification) {
+            print("nil")
+             let reachability = note.object as! Reachability
+
+             switch reachability.connection {
+             case .wifi:
+                 print("Wifi Connection")
+
+             case .cellular:
+                 print("Cellular Connection")
+
+             case .unavailable:
+                 print("No Connection")
+               let alert = UIAlertController(title: "경고", message: "네트워크 연결을 확인해주세요.", preferredStyle: UIAlertController.Style.alert)
+                let okAction = UIAlertAction(title: "다시 시도", style: .default, handler: { (action) in
+                })4
+               
+               alert.addAction(okAction)
+               present(alert, animated: true, completion: nil)
+
+             case .none:
+                 print("No Connection")
+               let alert = UIAlertController(title: "경고!!!", message: "네트워크 연결을 확인해주세요.", preferredStyle: UIAlertController.Style.alert)
+                let okAction = UIAlertAction(title: "OK", style: .default) { (action) in 
+                
+                      }
+               alert.addAction(okAction)
+               present(alert, animated: true, completion: nil)
+
+
+             }
+         }
+
+         override func viewDidDisappear(_ animated: Bool) {
+             super.viewDidDisappear(animated)
+             reachability.stopNotifier()
+             NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
+         }
+    
     @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
         if sender.direction == .left { //왼쪽으로 하면
             tabBarController?.selectedIndex = 1 //index1 보여주기
@@ -71,7 +119,7 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
     {
         let pLocation = CLLocationCoordinate2DMake(latitudeValue, longitudeValue) // 위경도를 매개변수로 하여 2DMake 함수를 호출하고, 리턴 값을 pLocation으로 받는다
         let spanValue = MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span) //범위 값을 매개변수로 하여 spanValue로 받는다
-       let pRegion = MKCoordinateRegion(center: pLocation, span: spanValue) //Plocation과 spanvalue를 매개변수로 하여 리턴 값을 pRegion으로 받는다.
+        let pRegion = MKCoordinateRegion(center: pLocation, span: spanValue) //Plocation과 spanvalue를 매개변수로 하여 리턴 값을 pRegion으로 받는다.
 //        area_Map.setRegion(pRegion, animated: true) //pRegion 값을 매개변수로 하여 mymap.setregion 함수를 호출
     }
     

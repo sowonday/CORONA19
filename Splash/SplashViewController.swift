@@ -18,7 +18,7 @@ class SplashViewController: UIViewController {
          checkDeviceNetworkStatus()
       }
       
-      func checkDeviceNetworkStatus() {
+    func checkDeviceNetworkStatus() {
         if(DeviceManager.shared.networkStatus) {
                   
             let firstVC = UIStoryboard(name: "Make", bundle: nil).instantiateViewController(withIdentifier: "tabbar")
@@ -26,17 +26,7 @@ class SplashViewController: UIViewController {
             present(firstVC, animated: true, completion: nil)
             
                 }
-        
-        
-//          if(DeviceManager.shared.networkStatus) {
-//             let firstVC = UIStoryboard(name: "Make", bundle: nil).instantiateViewController(withIdentifier: "MyAreaViewController")
-//
-//              present(firstVC, animated: true, completion: nil)
-//            let secondVC = UIStoryboard(name: "Make", bundle: nil).instantiateViewController(withIdentifier: "AllAreaViewController")
-//
-//              let tb = UITabBarController()
-//            tb.setViewControllers([firstVC,secondVC], animated: true)
-//            present(tb, animated: true, completion: nil)
+
            else {
               let alert: UIAlertController = UIAlertController(title: "네트워크 상태 확인", message: "네트워크가 불안정 합니다.", preferredStyle: .alert)
               let action: UIAlertAction = UIAlertAction(title: "다시 시도", style: .default, handler: { (action) in
