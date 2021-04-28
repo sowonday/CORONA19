@@ -11,29 +11,40 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("sw")
+        print("SW")
     }
     
     override func viewDidAppear(_ animated: Bool) {
-           checkDeviceNetworkStatus()
-        }
-        
-        func checkDeviceNetworkStatus() {
-            if(DeviceManager.shared.networkStatus) {
-                let firstVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyAreaViewController")
-                
-               
-                self.present(firstVC, animated: true, completion: nil)
-            }
-            else {
-                let alert = UIAlertController(title: "네트워크 상태 확인", message: "네트워크가 불안정 합니다.", preferredStyle: UIAlertController.Style.alert)
-                let action = UIAlertAction(title: "다시 시도", style: .default) { (action) in
-                    self.checkDeviceNetworkStatus()
+         checkDeviceNetworkStatus()
+      }
+      
+      func checkDeviceNetworkStatus() {
+        if(DeviceManager.shared.networkStatus) {
+                  
+            let firstVC = UIStoryboard(name: "Make", bundle: nil).instantiateViewController(withIdentifier: "tabbar")
+            firstVC.modalPresentationStyle = .fullScreen
+            present(firstVC, animated: true, completion: nil)
+            
                 }
-
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: nil)
-                
-            }
-        }
-    }
+        
+        
+//          if(DeviceManager.shared.networkStatus) {
+//             let firstVC = UIStoryboard(name: "Make", bundle: nil).instantiateViewController(withIdentifier: "MyAreaViewController")
+//
+//              present(firstVC, animated: true, completion: nil)
+//            let secondVC = UIStoryboard(name: "Make", bundle: nil).instantiateViewController(withIdentifier: "AllAreaViewController")
+//
+//              let tb = UITabBarController()
+//            tb.setViewControllers([firstVC,secondVC], animated: true)
+//            present(tb, animated: true, completion: nil)
+           else {
+              let alert: UIAlertController = UIAlertController(title: "네트워크 상태 확인", message: "네트워크가 불안정 합니다.", preferredStyle: .alert)
+              let action: UIAlertAction = UIAlertAction(title: "다시 시도", style: .default, handler: { (action) in
+                  self.checkDeviceNetworkStatus()
+              })
+              alert.addAction(action)
+              present(alert, animated: true, completion: nil)
+              
+          }
+      }
+  }

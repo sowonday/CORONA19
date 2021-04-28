@@ -11,7 +11,7 @@
         <!--다른지역보기-->
         <scene sceneID="sIK-0o-aPf">
             <objects>
-                <viewController id="OnE-qe-NfS" customClass="AllAreaViewController" customModule="CORONA19" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllAreaViewController" id="OnE-qe-NfS" customClass="AllAreaViewController" customModule="CORONA19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Raa-mv-dZf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="5198.5507246376819" y="-573.21428571428567"/>
         </scene>
-        <!--CORONA-_19-->
+        <!--CORONA_19-->
         <scene sceneID="kbD-uK-DaN">
             <objects>
-                <tabBarController title="CORONA-_19" automaticallyAdjustsScrollViewInsets="NO" id="mQo-Sw-8kT" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbar" title="CORONA_19" automaticallyAdjustsScrollViewInsets="NO" id="mQo-Sw-8kT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r3x-sL-w0u">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -277,7 +277,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Nr5-ge-Wg0" kind="relationship" relationship="rootViewController" id="gJc-FJ-FYc"/>
+                        <segue destination="Nr5-ge-Wg0" kind="relationship" relationship="rootViewController" id="AA9-5V-hAN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEC-Y1-XmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -298,7 +298,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="OnE-qe-NfS" kind="relationship" relationship="rootViewController" id="3lO-Fw-5S3"/>
+                        <segue destination="OnE-qe-NfS" kind="relationship" relationship="rootViewController" id="YVn-rr-aGW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FzN-FF-6Kl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

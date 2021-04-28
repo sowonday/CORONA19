@@ -21,13 +21,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Used to Location&apos;s Info always for Using Beacon.</string>
+	<string>Used to Location's Info always for Using Beacon.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Used to Location&apos;s Info always for Using Beacon.</string>
+	<string>Used to Location's Info always for Using Beacon.</string>
 	<key>NSLocationUsageDescription</key>
 	<string>현재위치</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Used to Location&apos;s Info for Using Beacon when In Use.</string>
+	<string>Used to Location's Info for Using Beacon when In Use.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -52,7 +52,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Splash</string>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
