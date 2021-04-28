@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1526B4FE262445D2002B91E4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B4FD262445D2002B91E4 /* APIManager.swift */; };
-		1526B50126244AF9002B91E4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B50026244AF9002B91E4 /* Data.swift */; };
 		1526B50E26247A07002B91E4 /* Data_ALL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526B50D26247A07002B91E4 /* Data_ALL.swift */; };
 		153AA213260CDC1800691311 /* All_Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AA212260CDC1800691311 /* All_Area.swift */; };
-		154DF5472637E7EC00294A5A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154DF5462637E7EC00294A5A /* Network.swift */; };
-		154DF54A2637FFAC00294A5A /* Wifi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154DF5492637FFAC00294A5A /* Wifi.swift */; };
 		154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE982604A10D00C05F41 /* AppDelegate.swift */; };
 		154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */; };
 		154EFEA02604A10D00C05F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFE9E2604A10D00C05F41 /* Main.storyboard */; };
@@ -20,16 +17,16 @@
 		154EFEA52604A10E00C05F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEA42604A10E00C05F41 /* Assets.xcassets */; };
 		154EFEA82604A10E00C05F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEA62604A10E00C05F41 /* LaunchScreen.storyboard */; };
 		1556264D26130453009458A1 /* MY_Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1556264C26130453009458A1 /* MY_Area.swift */; };
+		1558B06E26393E040054475B /* Newwork_pop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558B06D26393E040054475B /* Newwork_pop.swift */; };
+		1558B071263946FA0054475B /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1558B070263946FA0054475B /* Splash.storyboard */; };
+		1558B07626394DA00054475B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558B07526394DA00054475B /* SplashViewController.swift */; };
 		58019FA58F6C7D19817823B6 /* Pods_CORONA19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5160390D8613DD01B24395F /* Pods_CORONA19.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1526B4FD262445D2002B91E4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		1526B50026244AF9002B91E4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		1526B50D26247A07002B91E4 /* Data_ALL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_ALL.swift; sourceTree = "<group>"; };
 		153AA212260CDC1800691311 /* All_Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_Area.swift; sourceTree = "<group>"; };
-		154DF5462637E7EC00294A5A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		154DF5492637FFAC00294A5A /* Wifi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wifi.swift; sourceTree = "<group>"; };
 		154EFE952604A10D00C05F41 /* CORONA19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CORONA19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		154EFE982604A10D00C05F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		154EFE9A2604A10D00C05F41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +36,9 @@
 		154EFEA72604A10E00C05F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		154EFEA92604A10E00C05F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1556264C26130453009458A1 /* MY_Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MY_Area.swift; sourceTree = "<group>"; };
+		1558B06D26393E040054475B /* Newwork_pop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Newwork_pop.swift; sourceTree = "<group>"; };
+		1558B070263946FA0054475B /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		1558B07526394DA00054475B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		9F07B7D2EB642BDBA6851DC0 /* Pods-Program.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Program.debug.xcconfig"; path = "Target Support Files/Pods-Program/Pods-Program.debug.xcconfig"; sourceTree = "<group>"; };
 		D5160390D8613DD01B24395F /* Pods_CORONA19.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CORONA19.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4C314F63D9FD8C2E8C56EA /* Pods-CORONA19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CORONA19.debug.xcconfig"; path = "Target Support Files/Pods-CORONA19/Pods-CORONA19.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				1526B4FD262445D2002B91E4 /* APIManager.swift */,
-				1526B50026244AF9002B91E4 /* Data.swift */,
 				1526B50D26247A07002B91E4 /* Data_ALL.swift */,
 			);
 			path = API;
@@ -71,8 +70,7 @@
 		154DF5452637E7C900294A5A /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				154DF5462637E7EC00294A5A /* Network.swift */,
-				154DF5492637FFAC00294A5A /* Wifi.swift */,
+				1558B06D26393E040054475B /* Newwork_pop.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -80,6 +78,7 @@
 		154EFE8C2604A10D00C05F41 = {
 			isa = PBXGroup;
 			children = (
+				1558B07826394DA50054475B /* Splash */,
 				154DF5452637E7C900294A5A /* Network */,
 				1526B4FC26244588002B91E4 /* API */,
 				154EFE972604A10D00C05F41 /* Program */,
@@ -111,6 +110,15 @@
 				153AA212260CDC1800691311 /* All_Area.swift */,
 			);
 			path = Program;
+			sourceTree = "<group>";
+		};
+		1558B07826394DA50054475B /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				1558B07526394DA00054475B /* SplashViewController.swift */,
+				1558B070263946FA0054475B /* Splash.storyboard */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		93D28A999C51C4555AF5E59F /* Frameworks */ = {
@@ -194,6 +202,7 @@
 				154EFEA82604A10E00C05F41 /* LaunchScreen.storyboard in Resources */,
 				154EFEA52604A10E00C05F41 /* Assets.xcassets in Resources */,
 				154EFEA02604A10D00C05F41 /* Main.storyboard in Resources */,
+				1558B071263946FA0054475B /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,12 +258,11 @@
 				1526B4FE262445D2002B91E4 /* APIManager.swift in Sources */,
 				1526B50E26247A07002B91E4 /* Data_ALL.swift in Sources */,
 				154EFEA32604A10D00C05F41 /* Program.xcdatamodeld in Sources */,
+				1558B07626394DA00054475B /* SplashViewController.swift in Sources */,
 				1556264D26130453009458A1 /* MY_Area.swift in Sources */,
 				154EFE992604A10D00C05F41 /* AppDelegate.swift in Sources */,
-				154DF5472637E7EC00294A5A /* Network.swift in Sources */,
-				154DF54A2637FFAC00294A5A /* Wifi.swift in Sources */,
+				1558B06E26393E040054475B /* Newwork_pop.swift in Sources */,
 				154EFE9B2604A10D00C05F41 /* SceneDelegate.swift in Sources */,
-				1526B50126244AF9002B91E4 /* Data.swift in Sources */,
 				153AA213260CDC1800691311 /* All_Area.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

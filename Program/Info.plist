@@ -2,14 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Used to Location&apos;s Info always for Using Beacon.</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Used to Location&apos;s Info always for Using Beacon.</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Used to Location&apos;s Info for Using Beacon when In Use.</string>
-	<key>NSLocationUsageDescription</key>
-	<string>현재위치</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -28,6 +20,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Used to Location&apos;s Info always for Using Beacon.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Used to Location&apos;s Info always for Using Beacon.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>현재위치</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Used to Location&apos;s Info for Using Beacon when In Use.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -52,7 +52,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Splash</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

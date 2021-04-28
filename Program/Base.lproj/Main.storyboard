@@ -135,7 +135,7 @@
         <!--내 지역의 확진자는?-->
         <scene sceneID="gJ9-Sg-L4O">
             <objects>
-                <viewController id="Nr5-ge-Wg0" customClass="MyAreaViewController" customModule="CORONA19" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyAreaViewController" id="Nr5-ge-Wg0" customClass="MyAreaViewController" customModule="CORONA19" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vyD-BL-Sgc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

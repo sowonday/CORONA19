@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import SwiftyJSON
+import NetworkExtension
 
 
 class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
@@ -35,8 +36,7 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
     
     let locationManager = CLLocationManager()
     
-    var Manager = APIManager() // getData(지역)
-    let reachability = try! Reachability()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,63 +66,6 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
           }
     } //손으로 tab bar 넘기기
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-          NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
-          do {
-              try reachability.startNotifier()
-          } catch {
-              print("Unable to start notifier")
-          }
-      }
-
-      @objc func reachabilityChanged(note: Notification) {
-          let reachability = note.object as! Reachability
-
-          switch reachability.connection {
-          case .wifi:
-              print("Wifi Connection")
-              
-          case .cellular:
-              print("Cellular Connection")
-              
-          case .unavailable:
-              print("No Connection")
-            let alert = UIAlertController(title: "경고", message: "네트워크 연결을 확인해주세요.", preferredStyle: UIAlertController.Style.alert)
-            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-
-                   }
-//            let setAction = UIAlertAction(title: "설정", style: .destructive) { (action:UIAlertAction)-> Void in self.dismiss(animated: true, completion: nil)
-//            }
-            
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
-             
-          case .none:
-              print("No Connection")
-            let alert = UIAlertController(title: "경고!!!", message: "네트워크 연결을 확인해주세요.", preferredStyle: UIAlertController.Style.alert)
-            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-
-                   }
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
-
-
-          }
-      }
-
-      override func viewDidDisappear(_ animated: Bool) {
-          super.viewDidDisappear(animated)
-          reachability.stopNotifier()
-          NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
-      }
-  
-
-    
-   
-   
-
-
 
     func goLocation(latitudeValue: CLLocationDegrees, longitudeValue: CLLocationDegrees, delta span: Double) // 입력파라미터: 위도 값, 경도 값, 범위
     {
