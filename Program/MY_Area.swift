@@ -9,13 +9,11 @@ import UIKit
 import MapKit
 import CoreLocation
 import SwiftyJSON
-import NetworkExtension
+import Network
 
 
 class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
  
-    
-    
     @IBOutlet weak var area_death: UITextField! //사망자
     @IBOutlet weak var area_totalCase: UITextField! // 전체 확진자
     @IBOutlet weak var area_newCase: UITextField! //오늘의 확진자
@@ -36,7 +34,8 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
     
     let locationManager = CLLocationManager()
     let reachability = try! Reachability()
-
+ 
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +54,27 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
         locationManager.requestWhenInUseAuthorization() //위치데이터를 추적하기 위해 사용자에게 승인을 요구
         locationManager.startUpdatingLocation()//위치 업데이트 시작
 //        area_Map.showsUserLocation = true // 위치 값 보기를 true로 설정
-
         
+    }
+    
+    func checkAgain()  {
+        if(DeviceManager.shared.networkStatus){
+           
+                let secondVC = UIStoryboard(name: "Make", bundle: nil).instantiateViewController(withIdentifier: "MyAreaViewController")
+                secondVC.modalPresentationStyle = .fullScreen
+                self.present(secondVC, animated: true, completion: nil)
+            
+            
+        }
+        else {
+           let alert: UIAlertController = UIAlertController(title: "네트워크 상태 확인", message: "네트워크가 불안정 합니다.", preferredStyle: .alert)
+           let action: UIAlertAction = UIAlertAction(title: "다시 시도", style: .default, handler: { (action) in
+               self.checkAgain()
+           })
+           alert.addAction(action)
+           present(alert, animated: true, completion: nil)
+           
+       }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,9 +87,8 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
          }
 
          @objc func reachabilityChanged(note: Notification) {
-            print("nil")
              let reachability = note.object as! Reachability
-
+            
              switch reachability.connection {
              case .wifi:
                  print("Wifi Connection")
@@ -81,27 +98,31 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
 
              case .unavailable:
                  print("No Connection")
-               let alert = UIAlertController(title: "경고", message: "네트워크 연결을 확인해주세요.", preferredStyle: UIAlertController.Style.alert)
-                let okAction = UIAlertAction(title: "다시 시도", style: .default, handler: { (action) in
-                })4
+                checkAgain()
+                
+                
+//               let alert = UIAlertController(title: "경고", message: "네트워크 연결을 확인해주세요.", preferredStyle: UIAlertController.Style.alert)
+//                let okAction = UIAlertAction(title: "다시 시도", style: .default, handler: { [self] (action) in checkAgain()
+//                })
+//
+//               alert.addAction(okAction)
+//               present(alert, animated: true, completion: nil)
                
-               alert.addAction(okAction)
-               present(alert, animated: true, completion: nil)
 
              case .none:
-                 print("No Connection")
-               let alert = UIAlertController(title: "경고!!!", message: "네트워크 연결을 확인해주세요.", preferredStyle: UIAlertController.Style.alert)
-                let okAction = UIAlertAction(title: "OK", style: .default) { (action) in 
-                
-                      }
-               alert.addAction(okAction)
-               present(alert, animated: true, completion: nil)
-
-
+                 print("No Connection!!!")
+                checkAgain()
+//               let alert = UIAlertController(title: "경고!!!", message: "네트워크 연결을 확인해주세요.", preferredStyle: UIAlertController.Style.alert)
+//                let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+//                      }
+//               alert.addAction(okAction)
+//               present(alert, animated: true, completion: nil)
+//
              }
          }
-
+    
          override func viewDidDisappear(_ animated: Bool) {
+        
              super.viewDidDisappear(animated)
              reachability.stopNotifier()
              NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: reachability)
@@ -132,8 +153,8 @@ class MyAreaViewController: UIViewController,CLLocationManagerDelegate{
 
         CLGeocoder().reverseGeocodeLocation(pLocation!, completionHandler: { //위도 경도를 가지고 역으로 주소 찾기
             (placemarks, error)-> Void in
-            let pm = placemarks!.first // 첫 부분만 pm상수 대입
-            let country = pm!.country  // 나라 값을 대입
+            let pm = placemarks?.first // 첫 부분만 pm상수 대입
+            let country = pm?.country  // 나라 값을 대입
             var address:String = country! // address에 country 값 대입
             
 //                    if let locations = locations.first{

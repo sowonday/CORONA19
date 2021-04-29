@@ -62,6 +62,7 @@ public class Reachability {
 
     /// Set to `false` to force Reachability.connection to .none when on cellular connection (default value `true`)
     public var allowsCellularConnection: Bool
+    public var allowWifiConnection: Bool
 
     // The notification center on which "reachability changed" events are being posted
     public var notificationCenter: NotificationCenter = NotificationCenter.default
@@ -85,7 +86,7 @@ public class Reachability {
         case .unavailable?, nil: return .unavailable
         case .none?: return .unavailable
         case .cellular?: return allowsCellularConnection ? .cellular : .unavailable
-        case .wifi?: return .wifi
+        case .wifi?: return allowWifiConnection ? .wifi: .unavailable
         }
     }
 
@@ -113,6 +114,7 @@ public class Reachability {
                          targetQueue: DispatchQueue? = nil,
                          notificationQueue: DispatchQueue? = .main) {
         self.allowsCellularConnection = true
+        self.allowWifiConnection = true
         self.reachabilityRef = reachabilityRef
         self.reachabilitySerialQueue = DispatchQueue(label: "uk.co.ashleymills.reachability", qos: queueQoS, target: targetQueue)
         self.notificationQueue = notificationQueue
@@ -282,7 +284,8 @@ extension SCNetworkReachabilityFlags {
                 connection = .wifi
             }
         }
-
+        
+        
         if isOnWWANFlagSet {
             connection = .cellular
         }

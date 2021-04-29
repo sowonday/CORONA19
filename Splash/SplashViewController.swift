@@ -11,7 +11,7 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("SW")
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,4 +37,8 @@ class SplashViewController: UIViewController {
               
           }
       }
-  }
+    
+   
+    
+    
+}
